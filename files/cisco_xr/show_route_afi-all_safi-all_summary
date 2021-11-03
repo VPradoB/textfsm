@@ -1,0 +1,39 @@
+RP/0/RP0/CPU0:MXLEOM02RTDCLFSER02#show route afi-all safi-all summary
+Thu Oct 28 16:03:57.402 CDT
+
+IPv4 Unicast:
+-------------
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            3          0          0           744          
+connected                        2          1          0           744          
+bgp 65000                        0          0          0           0            
+te-client                        0          0          0           0            
+dagr                             0          0          0           0            
+isis DC                          21         0          0           7560         
+static                           0          0          0           0            
+Total                            26         1          0           9048         
+
+
+IPv4 Multicast:
+---------------
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            0          0          0           0            
+connected                        0          0          0           0            
+isis DC                          0          0          0           0            
+Total                            0          0          0           0            
+
+
+IPv6 Unicast:
+-------------
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            0          0          0           0            
+connected                        0          0          0           0            
+connected l2tpv3_xconnect        0          0          0           0            
+local-srv6 bgp-65000             0          0          0           0            
+static                           0          0          0           0            
+Total                            0          0          0           0            
+
+
+IPv6 Multicast:
+---------------
+

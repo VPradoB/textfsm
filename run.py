@@ -1,12 +1,14 @@
-import sys
+import os
 import textfsm
 from tabulate import tabulate
-template = './templates/show_bgp_ipv4_all_neighbors_performance-statistics.textfsm'
-output_file = './files/cisco_commands/show_bgp_ipv4_all_neighbors_performance-statistics.txt'
-with open(template) as f, open(output_file) as output:
-    re_table = textfsm.TextFSM(f)
-    header = re_table.header
-    p = output.read()
-    result = re_table.ParseText(p)
-    print(result)
-    print(tabulate(result, headers=header))
+template = 'templates/cisco_ios/show_ip_bgp_neighbor,textfsm'
+command_file = 'files/cisco_ios/show_ip_bgp_neighbor'
+output_path = 'out/cisco_ios/show_ip_bgp_neighbor.out'
+with open(template) as t, open(command_file) as c:
+    with open(output_path, 'w') as o:
+        re_table = textfsm.TextFSM(t)
+        header = re_table.header
+        p = c.read()
+        result = re_table.ParseText(p)
+        print(result, file=o)
+        print(tabulate(result, headers=header))

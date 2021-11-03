@@ -1,0 +1,211 @@
+B:VIHMTX-TAB8018-EA# show router bgp summary 
+===============================================================================
+ BGP Router ID:10.190.3.6       AS:65000       Local AS:65000      
+===============================================================================
+BGP Admin State         : Up          BGP Oper State              : Up
+Total Peer Groups       : 4           Total Peers                 : 31        
+Total VPN Peer Groups   : 7           Total VPN Peers             : 8         
+Total BGP Paths         : 114044      Total Path Memory           : 42106446  
+ 
+Total IPv4 Remote Rts   : 0           Total IPv4 Rem. Active Rts  : 0         
+Total IPv6 Remote Rts   : 0           Total IPv6 Rem. Active Rts  : 0         
+Total IPv4 Backup Rts   : 0           Total IPv6 Backup Rts       : 0         
+Total LblIpv4 Rem Rts   : 27877       Total LblIpv4 Rem. Act Rts  : 4719      
+Total LblIpv6 Rem Rts   : 0           Total LblIpv6 Rem. Act Rts  : 0         
+Total LblIpv4 Bkp Rts   : 3878        Total LblIpv6 Bkp Rts       : 0          
+Total Supressed Rts     : 0           Total Hist. Rts             : 0         
+Total Decay Rts         : 0         
+ 
+Total VPN-IPv4 Rem. Rts : 783304      Total VPN-IPv4 Rem. Act. Rts: 149431    
+Total VPN-IPv6 Rem. Rts : 864         Total VPN-IPv6 Rem. Act. Rts: 0         
+Total VPN-IPv4 Bkup Rts : 33710       Total VPN-IPv6 Bkup Rts     : 0         
+Total VPN Local Rts     : 948         Total VPN Supp. Rts         : 0         
+Total VPN Hist. Rts     : 0           Total VPN Decay Rts         : 0         
+ 
+Total MVPN-IPv4 Rem Rts : 114         Total MVPN-IPv4 Rem Act Rts : 0         
+Total MVPN-IPv6 Rem Rts : 0           Total MVPN-IPv6 Rem Act Rts : 0         
+Total MDT-SAFI Rem Rts  : 0           Total MDT-SAFI Rem Act Rts  : 0         
+Total McIPv4 Remote Rts : 1431        Total McIPv4 Rem. Active Rts: 476       
+Total McIPv6 Remote Rts : 0           Total McIPv6 Rem. Active Rts: 0         
+Total McVpnIPv4 Rem Rts : 0           Total McVpnIPv4 Rem Act Rts : 0         
+Total McVpnIPv6 Rem Rts : 0           Total McVpnIPv6 Rem Act Rts : 0         
+ 
+Total EVPN Rem Rts      : 0           Total EVPN Rem Act Rts      : 0         
+Total L2-VPN Rem. Rts   : 0           Total L2VPN Rem. Act. Rts   : 0         
+Total MSPW Rem Rts      : 0           Total MSPW Rem Act Rts      : 0         
+Total RouteTgt Rem Rts  : 702         Total RouteTgt Rem Act Rts  : 702       
+Total FlowIpv4 Rem Rts  : 0           Total FlowIpv4 Rem Act Rts  : 0         
+Total FlowIpv6 Rem Rts  : 0           Total FlowIpv6 Rem Act Rts  : 0         
+Total Link State Rem Rts: 0           Total Link State Rem Act Rts: 0         
+Total SrPlcyIpv4 Rem Rts: 0           Total SrPlcyIpv4 Rem Act Rts: 0         
+
+===============================================================================
+BGP Summary
+===============================================================================
+Legend : D - Dynamic Neighbor
+===============================================================================
+Neighbor
+Description
+                   AS PktRcvd InQ  Up/Down   State|Rcv/Act/Sent (Addr Family)
+                      PktSent OutQ
+-------------------------------------------------------------------------------
+10.190.2.201
+MERMTX-YUC8012-CB
+               65000  2309196    0 15h42m02s 261019/146223/1008 (VpnIPv4)
+                         2224    0           477/463/1 (MCastIPv4)
+                                             288/0/0 (VpnIPv6)
+                                             38/0/0 (MvpnIPv4)
+                                             0/0/0 (Evpn)
+                                             9285/4718/81 (Lbl-IPv4)
+10.190.2.203
+VIHMTX-TAB8018-CA
+               65000  106180*    0 0285d14h  261017/1934/1008 (VpnIPv4)
+                      2642944    0           477/7/1 (MCastIPv4)
+                                             288/0/0 (VpnIPv6)
+                                             38/0/0 (MvpnIPv4)
+                                             0/0/0 (Evpn)
+                                             9285/0/81 (Lbl-IPv4)
+10.190.2.250
+CANMTX-ROO8018-CA
+               65000  289269*    0 0353d03h  261017/1133/1008 (VpnIPv4)
+                      1402445    0           477/6/1 (MCastIPv4)
+                                             288/0/0 (VpnIPv6)
+                                             38/0/0 (MvpnIPv4)
+                                             0/0/0 (Evpn)
+                                             9285/1/81 (Lbl-IPv4)
+10.190.3.22
+To-MXTABCTR0315RTBHACCESMOB01
+               65000    19615    0 06d19h25m 1/0/222 (Lbl-IPv4)
+                        20451    0           
+10.224.79.142
+To-MXHVHE0014RTBHCSRMOB01-0/0/13
+               65000  1516223    0 24d16h35m 55/30/7481 (VpnIPv4)
+                        85373    0           39/39/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.1
+To-MXTABCTR0323RTBHCSRMOB01
+               65000   493199    0 0144d07h  9/5/7868 (VpnIPv4)
+                       485670    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.2
+To-MXTABCTR0294RTBHCSRMOB01
+               65000        0    0 0156d20h  Idle (Shutdown)
+                            1    0           
+10.240.130.3
+To-MXTABCTR0302RTBHCSRMOB01
+               65000   492531    0 52d14h10m 8/4/7868 (VpnIPv4)
+                       183171    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.4
+To-MXTABCTR0322RTBHCSRMOB01
+               65000   492311    0 52d14h10m 8/4/7868 (VpnIPv4)
+                       182926    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.5
+To-MXTABCTR0675RTBHCSRMOB01
+               65000   492002    0 52d14h10m 13/8/7868 (VpnIPv4)
+                       183366    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.6
+To-MXTABCTR0309RTBHCSRMOB01
+               65000   491449    0 52d14h10m 8/4/7868 (VpnIPv4)
+                       182913    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.7
+To-MXTABCTR0649RTBHCSRMOB01
+               65000   480925    0 52d14h10m 8/4/7868 (VpnIPv4)
+                       183250    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.8
+To-MXTABCTR0671RTBHCSRMOB01
+               65000   480878    0 52d14h10m 8/4/7868 (VpnIPv4)
+                       183188    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.9
+To-MXTABCTR0326RTBHCSRMOB01
+               65000   471351    0 52d14h10m 13/8/7868 (VpnIPv4)
+                       183104    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.10
+To-MXTABCTR0304RTBHCSRMOB01
+               65000   423815    0 27d14h18m 8/5/7868 (VpnIPv4)
+                        93899    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.11
+To-MXTABCTR0677RTBHCSRMOB01
+               65000   524547    0 0100d17h  9/5/7868 (VpnIPv4)
+                       340500    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.12
+To-MXTABCTR0321RTBHCSRMOB01
+               65000        0    0 0167d13h  Connect
+                            0    0           
+10.240.130.13
+To-MXMCR810007ARTBHCSRMOB01
+               65000   524482    0 0100d17h  7/4/7868 (VpnIPv4)
+                       340482    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.14
+To-MXTABCTR0306RTBHCSRMOB01
+               65000   524490    0 0100d17h  7/4/7868 (VpnIPv4)
+                       340583    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.15
+To-MXTABCTR0653RTBHCSRMOB01
+               65000   514290    0 0100d17h  8/4/7868 (VpnIPv4)
+                       340695    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.16
+To-MXMCR810006ARTBHCSRMOB01
+               65000   505894    0 0100d17h  7/4/7868 (VpnIPv4)
+                       340552    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.17
+To-MXMCR810016ARTBHCSRMOB01
+               65000        0    0 0167d13h  Connect
+                            0    0           
+10.240.130.18
+To-MXMCR810015ARTBHCSRMOB01
+               65000   506051    0 0100d17h  11/6/7868 (VpnIPv4)
+                       340649    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.19
+To-MXMCR810005ARTBHCSRMOB01
+               65000   505578    0 27d20h31m 14/8/7868 (VpnIPv4)
+                        94564    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.20
+To-MXTABCTR0308RTBHCSRMOB01
+               65000   505022    0 12d20h12m 11/6/7868 (VpnIPv4)
+                        45943    0           33/33/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.59
+To-MXTABCTR0670RTBHCSRMOB01
+               65000        0    0 0167d13h  Active
+                            0    0           
+10.240.130.60
+To-MXTABCTR0323RTBHCSRMOB01
+               65000        0    0 0167d13h  Active
+                            0    0           
+10.240.130.61
+To-MXTABCTR0308RTBHCSRMOB01
+               65000        0    0 0167d13h  Connect
+                            0    0           
+10.240.130.62
+To-MXTABCTR0668RTBHCSRMOB01
+               65000  1943079    0 0189d00h  13/8/8124 (VpnIPv4)
+                       640901    0           34/34/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.63
+To-MXTABCTR0999RTBHCSRMOB01
+               65000  1704067    0 0131d04h  13/8/8124 (VpnIPv4)
+                       445524    0           34/34/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+10.240.130.64
+To-MXTABCTR0655RTBHCSRMOB01
+               65000  1625179    0 46d10h52m 13/8/8124 (VpnIPv4)
+                       162391    0           34/34/111 (RouteTarget)
+                                             1/0/155 (Lbl-IPv4)
+-------------------------------------------------------------------------------
+* indicates that the corresponding row element may have been truncated.
+
