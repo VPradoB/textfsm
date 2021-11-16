@@ -1,0 +1,376 @@
+Peer: 10.190.31.13+179 AS 28469 Local: 10.190.31.15+63667 AS 28469
+  Description: internal-bgp-isp-tx
+  Group: ibgp-isp-tx           Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: Internal    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Hold Timer Expired Error
+  Export: [ next-hop-self ]
+  Options: <Preference LocalAddress AuthKey AddressFamily Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Address families configured: inet-unicast inet6-labeled-unicast
+  Local Address: 10.190.31.15 Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  NLRI inet6-labeled-unicast: ExplicitNull
+  Number of flaps: 184
+  Last flap event: RestartTimeout
+  Error: 'Hold Timer Expired Error' Sent: 185 Recv: 2
+  Peer ID: 10.190.31.13    Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 1     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  NLRI for restart configured on peer: inet-unicast inet6-labeled-unicast
+  NLRI advertised by peer: inet-unicast inet6-labeled-unicast
+  NLRI for this session: inet-unicast inet6-labeled-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  NLRI that peer supports restart for: inet-unicast inet6-labeled-unicast
+  NLRI peer can save forwarding state: inet-unicast inet6-labeled-unicast
+  NLRI that restart is negotiated for: inet-unicast inet6-labeled-unicast
+  NLRI of received end-of-rib markers: inet-unicast inet6-labeled-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast inet6-labeled-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 28469)
+  Peer does not support Addpath
+  NLRI that peer supports extended nexthop encoding for: inet-unicast inet-multicast inet-vpn-unicast
+  NLRI(s) enabled for color nexthop resolution: inet-unicast inet6-labeled-unicast
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          854411
+  Table inet6.0 Bit: 30000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              23
+    Received prefixes:            23
+    Accepted prefixes:            23
+    Suppressed due to damping:    0
+    Advertised prefixes:          129290
+  Last traffic (seconds): Received 12   Sent 3    Checked 1513782
+  Input messages:  Total 50570  Updates 132	Refreshes 0	Octets 974122
+  Output messages: Total 2768454	Updates 2713234	Refreshes 0	Octets 268018763
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+  Output Queue[2]: 0            (inet6.0, inet6-labeled-unicast)
+Peer: 10.190.31.14+35879 AS 28469 Local: 10.190.31.15+179 AS 28469
+  Description: internal-bgp-isp-tx
+  Group: ibgp-isp-tx           Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: Internal    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Hold Timer Expired Error
+  Export: [ next-hop-self ] 
+  Options: <Preference LocalAddress AuthKey AddressFamily Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Address families configured: inet-unicast inet6-labeled-unicast
+  Local Address: 10.190.31.15 Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  NLRI inet6-labeled-unicast: ExplicitNull
+  Number of flaps: 8
+  Last flap event: RestartTimeout
+  Error: 'Hold Timer Expired Error' Sent: 8 Recv: 0
+  Peer ID: 10.190.31.14    Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 0     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  NLRI for restart configured on peer: inet-unicast inet6-labeled-unicast
+  NLRI advertised by peer: inet-unicast inet6-labeled-unicast
+  NLRI for this session: inet-unicast inet6-labeled-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  Restart flag received from the peer: Restarting
+  NLRI that peer supports restart for: inet-unicast inet6-labeled-unicast
+  NLRI peer can save forwarding state: inet-unicast inet6-labeled-unicast
+  NLRI that peer saved forwarding for: inet-unicast inet6-labeled-unicast
+  NLRI that restart is negotiated for: inet-unicast inet6-labeled-unicast
+  NLRI of received end-of-rib markers: inet-unicast inet6-labeled-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast inet6-labeled-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 28469)
+  Peer does not support Addpath
+  NLRI that peer supports extended nexthop encoding for: inet-unicast inet-multicast inet-vpn-unicast
+  NLRI(s) enabled for color nexthop resolution: inet-unicast inet6-labeled-unicast
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          854411
+  Table inet6.0 Bit: 30000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0     
+    Received prefixes:            23
+    Accepted prefixes:            23
+    Suppressed due to damping:    0
+    Advertised prefixes:          129290
+  Last traffic (seconds): Received 12   Sent 3    Checked 8972419
+  Input messages:  Total 299429	Updates 455	Refreshes 0	Octets 5731598
+  Output messages: Total 16873373	Updates 16545554	Refreshes 0	Octets 1639384805
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+  Output Queue[2]: 0            (inet6.0, inet6-labeled-unicast)
+Peer: 10.190.31.18+56493 AS 28469 Local: 10.190.31.15+179 AS 28469
+  Group: ibgp-mgmt             Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: Internal    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Hold Timer Expired Error
+  Options: <Preference LocalAddress AuthKey AddressFamily Rib-group Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Address families configured: inet-vpn-unicast
+  Local Address: 10.190.31.15 Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 111
+  Last flap event: HoldTime
+  Error: 'Hold Timer Expired Error' Sent: 106 Recv: 2
+  Error: 'Cease' Sent: 0 Recv: 2
+  Peer ID: 200.76.1.156    Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 3    Peer index: 0    SNMP index: 4     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  NLRI for restart configured on peer: inet-vpn-unicast
+  NLRI advertised by peer: inet-vpn-unicast
+  NLRI for this session: inet-vpn-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 150
+  NLRI that peer supports restart for: inet-vpn-unicast
+  NLRI peer can save forwarding state: inet-vpn-unicast
+  NLRI that peer saved forwarding for: inet-vpn-unicast
+  NLRI that restart is negotiated for: inet-vpn-unicast
+  NLRI of received end-of-rib markers: inet-vpn-unicast
+  NLRI of all end-of-rib markers sent: inet-vpn-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 28469)
+  Peer does not support Addpath
+  NLRI(s) enabled for color nexthop resolution: inet-vpn-unicast
+  Table bgp.l3vpn.0
+    RIB State: BGP restart is complete
+    RIB State: VPN restart is complete
+    Send state: not advertising
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+  Table MGMT.inet.0 Bit: 50000
+    RIB State: BGP restart is complete  
+    RIB State: VPN restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 7    Sent 24   Checked 4261678
+  Input messages:  Total 166461	Updates 1	Refreshes 0	Octets 3162804
+  Output messages: Total 155652	Updates 0	Refreshes 0	Octets 2957399
+  Output Queue[4]: 0            (MGMT.inet.0, inet-vpn-unicast)
+  Trace options:  all
+  Trace file: /var/log/bgp-ibgp-mgmt size 131072 files 10
+Peer: 12.87.67.65+179 AS 7018  Local: 12.87.67.66+65409 AS 28469
+  Description: ebgp-att-us-2
+  Group: att-us-2              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ reject-bogons nosmallprefixes nuevo-laredo-to-att-us-export ] Import: [ reject-bogons noprivateasns nosmallprefixes import-att-us ]
+  Options: <Preference AuthKey RemovePrivateAS AddressFamily PeerAS Multipath Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Address families configured: inet-unicast
+  Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 1
+  Last flap event: Stop
+  Error: 'Cease' Sent: 1 Recv: 0
+  Peer ID: 12.122.120.45   Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 4    Peer index: 0    SNMP index: 5     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/1/4.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  NLRI that peer supports restart for: inet-unicast
+  NLRI peer can save forwarding state: inet-unicast
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 7018)
+  Peer does not support Addpath
+  NLRI(s) enabled for color nexthop resolution: inet-unicast
+  Table inet.0 Bit: 20002
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              854405
+    Received prefixes:            854408
+    Accepted prefixes:            854406
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 29   Sent 22   Checked 437263
+  Input messages:  Total 709050	Updates 694625	Refreshes 0	Octets 52153907
+  Output messages: Total 15897	Updates 0	Refreshes 0	Octets 302047
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+  Trace options:  all
+  Trace file: /var/log/bgpattus2 size 131072 files 10
+Peer: 12.244.44.53+179 AS 7018 Local: 12.244.44.54+62400 AS 28469
+  Description: ebgp-att-us
+  Group: att-us                Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ reject-bogons nosmallprefixes nuevo-laredo-to-att-us-export ] Import: [ reject-bogons noprivateasns nosmallprefixes import-att-us ]
+  Options: <Preference AuthKey RemovePrivateAS AddressFamily PeerAS Multipath Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Address families configured: inet-unicast
+  Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 23
+  Last flap event: Stop
+  Error: 'Cease' Sent: 24 Recv: 0
+  Peer ID: 12.122.120.47   Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 1    Peer index: 0    SNMP index: 2     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-1/1/4.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  NLRI that peer supports restart for: inet-unicast
+  NLRI peer can save forwarding state: inet-unicast
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 7018)
+  Peer does not support Addpath
+  NLRI(s) enabled for color nexthop resolution: inet-unicast
+  Table inet.0 Bit: 20001
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              854407
+    Received prefixes:            854413
+    Accepted prefixes:            854411
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 8    Sent 27   Checked 437268
+  Input messages:  Total 713065	Updates 698554	Refreshes 0	Octets 52467885
+  Output messages: Total 15898	Updates 0	Refreshes 0	Octets 302066
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+Peer: 2001:1890:c02:9e4f::eeac:7d72+179 AS 7018 Local: 2001:1890:c02:9e4f::11ac:7d72+60655 AS 28469
+  Description: ebgp-att-us_v6
+  Group: att-us_v6             Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ nosmallprefixes-ipv6 nuevo-laredo-to-att-us-export_v6 ] Import: [ noprivateasns nosmallprefixes-ipv6 import-att-us_v6 ]
+  Options: <Preference AuthKey RemovePrivateAS PeerAS Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 23
+  Last flap event: Stop
+  Error: 'Cease' Sent: 26 Recv: 0
+  Peer ID: 12.122.120.47   Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 2    Peer index: 0    SNMP index: 3     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-1/1/4.0                       
+  NLRI for restart configured on peer: inet6-unicast
+  NLRI advertised by peer: inet6-unicast
+  NLRI for this session: inet6-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  NLRI that peer supports restart for: inet6-unicast
+  NLRI peer can save forwarding state: inet6-unicast
+  NLRI that restart is negotiated for: inet6-unicast
+  NLRI of received end-of-rib markers: inet6-unicast
+  NLRI of all end-of-rib markers sent: inet6-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 7018)
+  Peer does not support Addpath
+  NLRI(s) enabled for color nexthop resolution: inet6-unicast
+  Table inet6.0 Bit: 30002
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              58589
+    Received prefixes:            129288
+    Accepted prefixes:            129287
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 3    Sent 3    Checked 437254
+  Input messages:  Total 432291	Updates 417882	Refreshes 0	Octets 43543595
+  Output messages: Total 15898	Updates 0	Refreshes 0	Octets 302073
+  Output Queue[2]: 0            (inet6.0, inet6-unicast)
+Peer: 2001:1890:c06:348b::ee70:9589+51725 AS 7018 Local: 2001:1890:c06:348b::1170:9589+179 AS 28469
+  Description: ebgp-att-us-2_v6
+  Group: att-us-2_v6           Routing-Instance: master
+  Forwarding routing-instance: master   
+  Type: External    State: Established    Flags: <Sync RSync>
+  Last State: EstabSync     Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ nosmallprefixes-ipv6 nuevo-laredo-to-att-us-export_v6 ] Import: [ noprivateasns nosmallprefixes-ipv6 import-att-us_v6 ]
+  Options: <Preference AuthKey RemovePrivateAS PeerAS Refresh>
+  Options: <GracefulShutdownRcv>
+  Authentication key is configured
+  Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 1
+  Last flap event: Stop
+  Error: 'Cease' Sent: 1 Recv: 0
+  Peer ID: 12.122.120.45   Local ID: 10.190.31.15      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 5    Peer index: 0    SNMP index: 6     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/1/4.0                       
+  NLRI for restart configured on peer: inet6-unicast
+  NLRI advertised by peer: inet6-unicast
+  NLRI for this session: inet6-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Restart time requested by this peer: 120
+  NLRI that peer supports restart for: inet6-unicast
+  NLRI peer can save forwarding state: inet6-unicast
+  NLRI that restart is negotiated for: inet6-unicast
+  NLRI of received end-of-rib markers: inet6-unicast
+  NLRI of all end-of-rib markers sent: inet6-unicast
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 7018)
+  Peer does not support Addpath
+  NLRI(s) enabled for color nexthop resolution: inet6-unicast
+  Table inet6.0 Bit: 30001
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              70701
+    Received prefixes:            129285
+    Accepted prefixes:            129284
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 29   Sent 10   Checked 437254
+  Input messages:  Total 431041	Updates 416647	Refreshes 0	Octets 43412218
+  Output messages: Total 15897	Updates 0	Refreshes 0	Octets 302054
+  Output Queue[2]: 0            (inet6.0, inet6-unicast)
+
