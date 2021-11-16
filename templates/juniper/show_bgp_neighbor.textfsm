@@ -1,0 +1,119 @@
+Value PeerIp (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value PeerAS (\d+)
+Value LocalIp (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value LocalAS (\d+)
+Value Description (\S+)
+Value Group (\S+)
+Value RoutingInstance (\S+)
+Value ForwardingRoutingInstance (\S+)
+Value Type (\S+)
+Value State (\S+)
+Value Flags (.+)
+Value LastState (\S+)
+Value LastEvent (\S+)
+Value LastError (.+)
+Value Export (.+)
+Value Import (.+)
+Value List Options (.+)
+Value AuthKey (.+)
+Value AddressFamiliesConfigured (.+)
+Value LocalAddress (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value Holdtime (\d+)
+Value Preference (\d+)
+Value LocalPreference (\d+)
+Value FlapNumber (\S+[\S ]+)
+Value LastFlapEvent (\S+[\S ]+)
+Value List Error (.+)
+Value List ErrorSent (\d+)
+Value List ErrorRecv (\d+)
+# Value FlapNumber2 (\d+)
+Value PeerId (\S+)
+Value LocalId (\S+)
+Value ActiveHoldTime (\d+)
+Value KeepAliveInterval (\d+)
+Value GroupIndex (\d+)
+Value PeerIndex (\d+)
+Value SNMPIndex (\d+)
+Value IOSessionThread (\S+)
+Value IOSessionState (\S+)
+Value BFD (\S+[\S ]+)
+Value PeerSuppRefrCap (\d+)
+Value StaleRoutesFromPeerKept (\d+)
+Value RestartTimeReqByPeer (\d+)
+Value RestartFlagFromPeer (\S+)
+Value AddPathSupport (.+)
+Value List InterfaceTable (\S+)
+Value List InterfaceTableBit (\S+)
+Value List TableRIBState (\S+[\S ]+)
+Value List TableSendState (\S+[\S ]+)
+Value List TableActivePrefixes (\d+)
+Value List TableReceivedPrefixes (\d+)
+Value List TableAcceptedPrefixes (\d+)
+Value List TableSupressedDueToDamping (\d+)
+Value List TableAdvertisedPrefixes (\d+)
+Value ASExtension (.+)
+Value LocalInterface (.+)
+Value LastTraffRecv (\d+)
+Value LastTraffSent (\d+)
+Value LastTraffChecked (\d+)
+Value InputMsgTotal (\d+)
+Value InputMsgUpdates (\d+)
+Value InputMsgRefreshes (\d+)
+Value InputMsgOctets (\d+)
+Value OutputMsgTotal (\d+)
+Value OutputMsgUpdates (\d+)
+Value OutputMsgRefreshes (\d+)
+Value OutputMsgOctets (\d+)
+Value List NLRIItem (.+)
+Value List NLRIValue (.+)
+Value List OutputQueue (\d+)
+Value List OutputQueueMsg (\d+)
+Value List OutputQueueInterfaces (\S+[\S ]+)
+
+
+Start
+  ^Peer:\s+${PeerIp}\+\d+ AS ${PeerAS}\s+Local: ${LocalIp}\+\d+ AS ${LocalAS}
+  ^  Description: ${Description}
+  ^  Group: ${Group}\s+Routing-Instance: ${RoutingInstance}
+  ^  Forwarding routing-instance: ${ForwardingRoutingInstance}
+  ^  Type: ${Type}\s+State: ${State}\s+Flags: <${Flags}>
+  ^  Last State: ${LastState}\s+Last Event: ${LastEvent}
+  ^  Last Error: ${LastError}
+  ^  Export: \[ ${Export} \] -> Continue
+  ^  Export: \[ ${Export} \] Import: \[ ${Import} \]
+  ^  Options: <${Options}>
+  ^  Authentication key ${AuthKey}
+  ^  Address families configured: ${AddressFamiliesConfigured}
+  ^  Holdtime: ${Holdtime} Preference: ${Preference} -> Continue
+  ^  Local Address: ${LocalAddress} Holdtime: ${Holdtime} Preference: ${Preference}
+  ^  Graceful Shutdown Receiver local-preference: ${LocalPreference}
+  ^  NLRI ${NLRIItem}: ${NLRIValue}
+  ^  Number of flaps: ${FlapNumber}
+  ^  Last flap event: ${LastFlapEvent}
+  ^  Error: '${Error}' Sent: ${ErrorSent} Recv: ${ErrorRecv}
+  ^  Peer ID: ${PeerId}\s+Local ID: ${LocalId}\s+Active Holdtime: ${ActiveHoldTime}
+  ^  Keepalive Interval: ${KeepAliveInterval}\s+Group index: ${GroupIndex}\s+Peer index: ${PeerIndex}\s+SNMP index: ${SNMPIndex}
+  ^  I/O Session Thread: ${IOSessionThread} State: ${IOSessionState}
+  ^  BFD: ${BFD}
+  ^  Peer supports Refresh capability \(${PeerSuppRefrCap}\)
+  ^  Stale routes from peer are kept for: ${StaleRoutesFromPeerKept}
+  ^  Restart time requested by this peer: ${RestartTimeReqByPeer}
+  ^  Restart flag received from the peer: ${RestartFlagFromPeer}
+  ^  Local Interface: ${LocalInterface}
+  ^  Peer ${ASExtension} AS extension \(peer-as \d+\)
+  ^  Peer ${AddPathSupport} Addpath
+  ^  Table ${InterfaceTable} Bit: ${InterfaceTableBit}
+  ^    RIB State: ${TableRIBState}
+  ^    Send state: ${TableSendState}
+  ^    Active prefixes:\s+${TableActivePrefixes}
+  ^    Received prefixes:\s+${TableReceivedPrefixes}
+  ^    Accepted prefixes:\s+${TableAcceptedPrefixes}
+  ^    Suppressed due to damping:\s+${TableSupressedDueToDamping}
+  ^    Advertised prefixes:\s+${TableAdvertisedPrefixes}
+  ^  Last traffic \(seconds\): Received ${LastTraffRecv}\s+Sent ${LastTraffSent}\s+Checked ${LastTraffChecked}
+  ^  Input messages:  Total ${InputMsgTotal}\s+Updates ${InputMsgUpdates}\s+Refreshes ${InputMsgRefreshes}\s+Octets ${InputMsgOctets}
+  ^  Output messages: Total ${OutputMsgTotal}\s+Updates ${OutputMsgUpdates}\s+Refreshes ${OutputMsgRefreshes}\s+Octets ${OutputMsgOctets} -> Record
+  # como la linea de abajo tiene el record, cada que la encuentra genera un nuevo record
+  # al ser estas variables tipo list encuentra multiples veces la lista y genera un registro vacio solo con los datos de las options
+  # TODO: Ver como funcionan los states para resolver el problema
+  # ^  Output Queue\[${OutputQueue}\]: ${OutputQueueMsg}\s+(${OutputQueueInterfaces}) -> Record

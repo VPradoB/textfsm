@@ -2,6 +2,14 @@ Value NeighborIP (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
 Value NeighborRemoteAs (\d+)
 Value NeighborBGPVersion (\d+)
 Value NeighborRemoteRouterId (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value BGPState (\S+)
+Value BGPStateUpFor (\S+)
+Value LastRead (\d+\:\d+\:\d+)
+Value LastWrite (\d+\:\d+\:\d+)
+Value HoldTime (\d+)
+Value KeepAliveInterval (\d+)
+Value ActiveNeighborSessions (\d+)
+Value ActiveNeighborSessions (\d+)
 
 Start
   ^BGP neighbor is ${NeighborIP},  remote AS ${NeighborRemoteAs}, internal link

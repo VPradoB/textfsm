@@ -1,11 +1,3 @@
-RP/0/RP0/CPU0:MXLEOM02RTDCLFSER02#show bgp nighbors
-                                            ^
-% Invalid input detected at '^' marker.
-RP/0/RP0/CPU0:MXLEOM02RTDCLFSER02#show bgp neighbor
-neighbor-group  neighbors  
-RP/0/RP0/CPU0:MXLEOM02RTDCLFSER02#show bgp neighbors 
-Thu Oct 28 17:57:29.328 CDT
-
 BGP neighbor is 10.190.110.0
  Remote AS 65000, local AS 65000, internal link
  Description: TO-MXLEOM02RTDCSPINE01

@@ -1,5 +1,3 @@
-RP/0/RP0/CPU0:MXLEOM02RTDCLFSER02#show run router bgp 
-Thu Oct 28 18:00:54.119 CDT
 router bgp 65000
  nsr
  bgp router-id 10.190.110.7

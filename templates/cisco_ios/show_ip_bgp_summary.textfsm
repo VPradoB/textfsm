@@ -1,0 +1,60 @@
+Value BGPIdentifier (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value LocalAs (\d+)
+Value TableVersion (\d+)
+Value MainRoutingTableVersion (\d+)
+Value NetworkEntries (\d+)
+Value NetworkEntriesMemory (\d+)
+Value PathEntries (\d+)
+Value PathMemory (\d+)
+Value BGPPathEntries (\d+)
+Value BGPBestPathEntries (\d+)
+Value BGPPathMemory (\d+)
+Value BGPrrinfoEntries (\d+)
+Value BGPrrinfoMemory (\d+)
+Value BGPAsPathEntries (\d+)
+Value BGPAsPathMemory (\d+)
+Value BGPCommunityEntries (\d+)
+Value BGPCommunityMemory (\d+)
+Value BGPExtendCommunityEntries (\d+)
+Value BGPExtendCommunityMemory (\d+)
+Value BGPRouteMapCacheEntries (\d+)
+Value BGPRouteMapCacheMemory (\d+)
+Value BGPFilterListCacheEntries (\d+)
+Value BGPFilterListCacheMemory (\d+)
+Value BGPTotalMemoryUsed (\d+)
+Value BGPPrefixes (\S+)
+Value BGPPaths (\S+)
+Value ScanInterval (\d+)
+Value NetworksPeaked (\d+)
+Value NetworksPeakedDt (\S+ \S+ \d+ \d+)
+Value NetworksPeakedTz (\S+)
+Value List Neighbor (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value List V (\d+)
+Value List AS (\d+)
+Value List MsgRcvd (\d+)
+Value List MsgSent (\d+)
+Value List TblVer (\d+)
+Value List InQ (\d+)
+Value List OutQ (\d+)
+Value List UpDown (\S+)
+Value List State (\d+)
+
+Start
+  ^BGP router identifier ${BGPIdentifier}, local AS number ${LocalAs}
+  ^BGP table version is ${TableVersion}, main routing table version ${MainRoutingTableVersion}
+  ^${NetworkEntries} network entries using ${NetworkEntriesMemory} bytes of memory
+  ^${PathEntries} path entries using ${PathMemory} bytes of memory
+  ^${BGPPathEntries}/${BGPBestPathEntries} BGP path/bestpath attribute entries using ${BGPPathMemory} bytes of memory
+  ^${BGPrrinfoEntries} BGP rrinfo entries using ${BGPrrinfoMemory} bytes of memory
+  ^${BGPAsPathEntries} BGP AS-PATH entries using ${BGPAsPathMemory} bytes of memory
+  ^${BGPCommunityEntries} BGP community entries using ${BGPCommunityMemory} bytes of memory
+  ^${BGPExtendCommunityEntries} BGP extended community entries using ${BGPExtendCommunityMemory} bytes of memory
+  ^${BGPRouteMapCacheEntries} BGP route-map cache entries using ${BGPRouteMapCacheMemory} bytes of memory
+  ^${BGPFilterListCacheEntries} BGP filter-list cache entries using ${BGPFilterListCacheMemory} bytes of memory
+  ^BGP using ${BGPTotalMemoryUsed} total bytes of memory
+  ^BGP activity ${BGPPrefixes} prefixes, ${BGPPaths} paths, scan interval ${ScanInterval} secs
+  ^${NetworksPeaked} networks peaked at ${NetworksPeakedDt} ${NetworksPeakedTz}\.*
+  ^Neighbor\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+TblVer\s+InQ\s+OutQ\s+Up/Down\s+State\/PfxRcd -> Table
+
+Table
+  ^${Neighbor}\s+${V}\s+${AS}\s+${MsgRcvd}\s+${MsgSent}\s+${TblVer}\s+${InQ}\s+${OutQ}\s+${UpDown}\s+${State} -> Continue
