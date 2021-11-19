@@ -1,6 +1,0 @@
-A:ACAMTX-ACAMTX-EA# show router bgp neighbor | match expression "(State|: Established)"
-State                : Established      Last State           : Active
-State                : Established      Last State           : Established
-State                : Established      Last State           : Established
-State                : Established      Last State           : Active
-
