@@ -1,4 +1,3 @@
-MXNLEGDP0610RTBHCSRMOB01#show ip bgp summary
 BGP router identifier 10.240.96.14, local AS number 65000
 BGP table version is 235212, main routing table version 235212
 571 network entries using 82224 bytes of memory

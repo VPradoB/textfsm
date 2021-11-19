@@ -1,4 +1,3 @@
-MXNLEGDP0610RTBHCSRMOB01#show ip bgp neighbor
 BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
  Inherits from template PS-AGG for session parameters
   BGP version 4, remote router ID 10.240.96.1
