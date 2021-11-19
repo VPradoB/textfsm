@@ -1,0 +1,16 @@
+Value List CodeKey (\S+)
+Value List CodeValue (\S+)
+Value ResumeIp (\S+)
+Value ResumeType (\S+[\S ]+)
+Value ResumeSubnets (\d+)
+Value ResumeMasks (\d+)
+Value List TblCode (\S+)
+Value List TblIp (\S+)
+Value List TblNumber (\S+)
+Value List TblViaIp (\S+)
+Value List TblSince (\S+)
+
+Start
+  ^\s+${ResumeIp} is ${ResumeType}, ${ResumeSubnets} subnets, ${ResumeMasks} masks
+  ^${TblCode}\s+${TblIp} ${TblNumber} via ${TblViaIp}, ${TblSince} -> Continue
+ 
