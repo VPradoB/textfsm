@@ -1,0 +1,12 @@
+RP/0/RP0/CPU0:MXMERM01RTDCEDGE01#show memory summary
+Thu Nov 18 13:15:44.044 CST
+
+node:      node0_RP0_CPU0
+------------------------------------------------------------------
+
+ Physical Memory: 18570M total (14404M available)
+ Application Memory : 18570M (14404M available)
+ Image: 4M (bootram: 0M)
+ Reserved: 0M, IOMem: 0M, flashfsys: 0M
+ Total shared window: 658M
+

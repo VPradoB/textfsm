@@ -1,0 +1,12 @@
+RP/0/RP0/CPU0:MXMERM01RTDCEDGE01#show route summary
+Thu Nov 18 13:14:23.063 CST
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+connected                        4          1          0           1240         
+local                            5          0          0           1240         
+static                           4          0          0           992          
+bgp 65000                        4841       542        0           1334984      
+te-client                        0          0          0           0            
+dagr                             0          0          0           0            
+isis DC                          34         1          0           12600        
+isis WAN                         1918       6          0           692640       
+Total                            6806       550        0           2043696     

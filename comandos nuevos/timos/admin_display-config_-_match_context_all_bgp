@@ -1,0 +1,421 @@
+B:VIHMTX-TAB8018-EA# admin display-config | match context all bgp  
+#--------------------------------------------------
+    log
+        event-control "bgp" 2022 generate
+#--------------------------------------------------
+    service
+        vprn 429001 name "VPRN GSM" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 429002 name "429002" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000000 name "VPRN-OYM-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+            bgp
+                no shutdown
+        vprn 1000001 name "VPRN-3G-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+            bgp
+                no shutdown
+        vprn 1000002 name "VPRN-LTE-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+            bgp
+                no shutdown
+        vprn 1000003 name "VOICE-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000004 name "SIGNALING-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000005 name "UMTS-DATA-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000006 name "RNC_IU_R-ATT" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000080 name "ATT-IT-STORES" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000120 name "VPRN_OAM_Huawei" customer 2 create
+            enable-bgp-vpn-backup ipv4 ipv6
+        vprn 1000200 name "TEF_LTE" customer 2 create
+            bgp                       
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-LTE"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.239.198
+                        description "TEF_4G Peer"
+                        authentication-key "XNcMFt06TDPZqtUsjcolg8A+yDQsD404FW8jlw==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+        vprn 1000201 name "TEF_3G_Data" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-DATA"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.239.212
+                        description "TEF_3G Data Peer"
+                        authentication-key "/aXKLYHNwUmGofiACc5ha6YUsczd2CdY/R759Q==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+        vprn 1000202 name "TEF_3G_Voice" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-VOICE"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.239.214
+                        description "TEF_3G Voice Peer"
+                        authentication-key "LpOdc+3pY1l45Ks9/VwKVzdVDoqb6O5pCtXg+Q==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+        vprn 1000203 name "TEF_3G_Control" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-CONTROL"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.239.216
+                        description "TEF_3G Control Peer"
+                        authentication-key "8GibyCo5dMhW3slX9g76iyenK1D0H2L/xmYAWA==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown           
+        vprn 1000204 name "TEF_3G_IuR" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-IUR"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.206.0
+                        description "TEF_3G IuR Peer-2"
+                        authentication-key "ogtKp2e2ZKQ4dzZmLZc6sZZgSgJYZM84ZWaZUA==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                    neighbor 201.162.239.218
+                        description "TEF_3G IuR Peer-1"
+                        authentication-key "3l/MAiEKAXoOb8NGIGHsYi4q84TAaxsXOZYWAA==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+        vprn 1000205 name "TEF_3G_IuB" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-IUB"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.206.2
+                        description "TEF_3G IuB Peer"
+                        authentication-key "563AjJegkLe51WTboooqGuAKuGu52W3pqKCCgg==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+        vprn 1000206 name "TEF_OAM" customer 2 create
+            bgp
+                group "TEMM"
+                    type external
+                    import "IMPORT-TEF-3G-OAM"
+                    export "EXPORT-TEF"
+                    local-as 28469 private no-prepend-global-as
+                    peer-as 7438
+                    neighbor 201.162.206.4
+                        description "TEF_OAM Peer"
+                        authentication-key "OO0Ul+6+Yb+AkY/xpPUWuXw/oCa8sPJMGmAyzg==" hash2
+                        multihop 255
+                        remove-private
+                        disable-communities extended
+                        ttl-security 255
+                    exit
+                exit
+                no shutdown
+#--------------------------------------------------
+        policy-options
+            policy-statement "EXPORT-TEF"
+                entry 100
+                    from
+                        protocol bgp-vpn
+            policy-statement "EXPORT-SGSN"
+                entry 15              
+                    from
+                        protocol bgp
+            policy-statement "EXPORT-OSPF-IT"
+                entry 10
+                    from
+                        protocol bgp-vpn
+            policy-statement "EXPORT-OSPF-STORE"
+                entry 10
+                    from
+                        protocol bgp-vpn
+            policy-statement "vrf-target_import"
+                entry 10
+                    from
+                        protocol bgp-vpn
+            policy-statement "EXPORT-OSPF-IT-O&M"
+                entry 10
+                    from
+                        protocol bgp-vpn
+#--------------------------------------------------
+        bgp
+            family ipv4 vpn-ipv4 mcast-ipv4 mvpn-ipv4
+            loop-detect discard-route
+            min-route-advertisement 5
+            multipath 4
+            local-as 65000
+            router-id 10.190.3.6
+            advertise-inactive
+            enable-peer-tracking
+            rapid-withdrawal
+            add-paths
+                ipv4 send 2 receive
+                vpn-ipv4 send 2 receive
+                vpn-ipv6 send 2 receive
+                label-ipv4 send 2 receive
+            exit                      
+            backup-path ipv4 label-ipv4
+            next-hop-resolution
+                labeled-routes
+                    transport-tunnel
+                        family vpn
+                            resolution-filter
+                                ldp
+                                rsvp
+                                bgp
+                            exit
+                            resolution any
+                        exit
+                        family label-ipv4
+                            resolution-filter
+                                ldp
+                                rsvp
+                            exit
+                            resolution filter
+                        exit
+                    exit
+                exit
+            exit
+            group "CSR-BH"
+                description "To-CSR-BH"
+                family vpn-ipv4 route-target label-ipv4
+                loop-detect discard-route
+                min-route-advertisement 5
+                next-hop-self
+                type internal
+                cluster 10.190.3.6
+                import "FROM-CSR"
+                export "TO-CSR"
+                peer-as 65000
+                advertise-inactive
+                enable-peer-tracking  
+                bfd-enable
+                add-paths
+                    ipv4 send 2 receive
+                    vpn-ipv4 send 2 receive
+                    label-ipv4 send 2 receive
+                exit
+                default-route-target
+                neighbor 10.240.130.1
+                    description "To-MXTABCTR0323RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0ytKXH9kDbKPTkB4ILou4HuM" hash2
+                exit
+                neighbor 10.240.130.2
+                    shutdown
+                    description "To-MXTABCTR0294RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0+SfjIrN5VisRybTJi6Ew/Uo" hash2
+                exit
+                neighbor 10.240.130.3
+                    description "To-MXTABCTR0302RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf06KDg2+uG0q/w9aQ3roUICD+" hash2
+                exit
+                neighbor 10.240.130.4
+                    description "To-MXTABCTR0322RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf07AHueRDsD3jG4pLfHwS/7md" hash2
+                exit
+                neighbor 10.240.130.5
+                    description "To-MXTABCTR0675RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0/sQnPMPnPueonrSI08JZgcu" hash2
+                exit
+                neighbor 10.240.130.6
+                    description "To-MXTABCTR0309RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf04Nj1wKGhBFUgpXH4saSU6+9" hash2
+                exit
+                neighbor 10.240.130.7
+                    description "To-MXTABCTR0649RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf01MUl6/OHffm+0VfoRvMXmhj" hash2
+                exit
+                neighbor 10.240.130.8
+                    description "To-MXTABCTR0671RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0+OKjBxl7clICPt3uKa9SDgf" hash2
+                exit
+                neighbor 10.240.130.9
+                    description "To-MXTABCTR0326RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0+MQdgYotgBIMsIU2gs8v8Rv" hash2
+                exit
+                neighbor 10.240.130.10
+                    description "To-MXTABCTR0304RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0/cJLSPfCncI0zms8zfmhB5E" hash2
+                exit
+                neighbor 10.240.130.11
+                    description "To-MXTABCTR0677RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf043pFy+L81DCgB+Ba7Sri1qI" hash2
+                exit
+                neighbor 10.240.130.12
+                    description "To-MXTABCTR0321RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf046r7cb3Gnv7BH5MTRklA33f" hash2
+                exit
+                neighbor 10.240.130.13
+                    description "To-MXMCR810007ARTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf04/z56S+clOCEkVp9ylEL6pm" hash2
+                exit
+                neighbor 10.240.130.14
+                    description "To-MXTABCTR0306RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0yLS0ywj2UXQbLgjsuAK0QkD" hash2
+                exit
+                neighbor 10.240.130.15
+                    description "To-MXTABCTR0653RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf03tl5fbsNDt59nMNWEKTsKg8" hash2
+                exit
+                neighbor 10.240.130.16
+                    description "To-MXMCR810006ARTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf03UFTKM+tRbho/Ks7WNRkudr" hash2
+                exit
+                neighbor 10.240.130.17
+                    description "To-MXMCR810016ARTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf05lRC1Yi1nVQ7KQ93ZjBRkDT" hash2
+                exit
+                neighbor 10.240.130.18
+                    description "To-MXMCR810015ARTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf06n5d81iKNnW5LUPuFvUUqjF" hash2
+                exit
+                neighbor 10.240.130.19
+                    description "To-MXMCR810005ARTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0yA4xD9n30ZnUMja9k3e+oY+" hash2
+                exit
+                neighbor 10.240.130.20
+                    description "To-MXTABCTR0308RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0wc3cuyPT3vURB6etoZFyhF8" hash2
+                exit
+                neighbor 10.240.130.59
+                    description "To-MXTABCTR0670RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0+/MaPBVkN0FXi5f4egZxwaM" hash2
+                exit
+                neighbor 10.240.130.60
+                    description "To-MXTABCTR0323RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf01MJekYReNMS+rX4NjeWKiaU" hash2
+                exit
+                neighbor 10.240.130.61
+                    description "To-MXTABCTR0308RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf03kIUf3hpWT93MmeW2ONlygv" hash2
+                exit
+                neighbor 10.240.130.62
+                    description "To-MXTABCTR0668RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf07Ur+lp0SLgL/cIsKtab9rF3" hash2
+                exit
+                neighbor 10.240.130.63
+                    description "To-MXTABCTR0999RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf01WN9FdRTce5lXmYz7YoxwZt" hash2
+                exit
+                neighbor 10.240.130.64
+                    description "To-MXTABCTR0655RTBHCSRMOB01"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0xMI4nm8ibDnb0CZJ88imBnC" hash2
+                exit
+            exit
+            group "PAG-BH"
+                description "To PAG-BH-Dual_Homed"
+                family vpn-ipv4 route-target label-ipv4
+                loop-detect discard-route
+                min-route-advertisement 5
+                next-hop-self
+                type internal
+                cluster 10.190.3.6
+                import "FROM-PAG-BH"
+                export "TO-PAG-BH"
+                peer-as 65000
+                advertise-inactive
+                enable-peer-tracking
+                bfd-enable
+                add-paths
+                    ipv4 send 2 receive
+                    vpn-ipv4 send 2 receive
+                    label-ipv4 send 2 receive
+                exit
+                default-route-target
+                neighbor 10.224.79.142
+                    description "To-MXHVHE0014RTBHCSRMOB01-0/0/13"
+                    authentication-key "2HXn0N3D7LlU0lnJZgNf0xlHSpEQjPZ/Sf7v5fDu0tfe" hash2
+                exit
+            exit
+            group "RR-REGIONAL"
+                description "Sesiones iBGP hacia RR Regionales"
+                family vpn-ipv4 mcast-ipv4 vpn-ipv6 mvpn-ipv4 evpn label-ipv4
+                next-hop-self
+                type internal
+                export "export-gestion-ipbh"
+                peer-as 65000
+                neighbor 10.190.2.201
+                    description "MERMTX-YUC8012-CB"
+                exit
+                neighbor 10.190.2.203
+                    description "VIHMTX-TAB8018-CA"
+                exit
+                neighbor 10.190.2.250
+                    description "CANMTX-ROO8018-CA"
+                exit
+            exit
+            group "Agregadores-7250-IXR-R6"
+                family label-ipv4
+                next-hop-self
+                type internal
+                cluster 10.190.3.6
+                import "REJECT-DEFAULT"
+                export "To-7250-IXR-R6"
+                peer-as 65000
+                advertise-inactive
+                enable-peer-tracking
+                bfd-enable
+                add-paths
+                    label-ipv4 send 2 receive
+                exit
+                neighbor 10.190.3.22
+                    description "To-MXTABCTR0315RTBHACCESMOB01"
+                exit
+            exit
+            no shutdown
+B:VIHMTX-TAB8018-EA# 

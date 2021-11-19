@@ -1,9 +1,9 @@
-MXNLEGDP0610RTBHCSRMOB01#show ip bgp neighbor
+MXNLEGDP0610RTBHCSRMOB01#show ip bgp neighbors
 BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
  Inherits from template PS-AGG for session parameters
   BGP version 4, remote router ID 10.240.96.1
-  BGP state = Established, up for 27w6d
-  Last read 00:00:47, last write 00:00:32, hold time is 180, keepalive interval is 60 seconds
+  BGP state = Established, up for 30w6d
+  Last read 00:00:01, last write 00:00:08, hold time is 180, keepalive interval is 60 seconds
   Neighbor sessions:
     1 active, is not multisession capable (disabled)
   Neighbor capabilities:
@@ -29,10 +29,10 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
                          Sent       Rcvd
     Opens:                  1          1
     Notifications:          0          0
-    Updates:               39     179514
-    Keepalives:        310078     288961
+    Updates:               39     192947
+    Keepalives:        343213     320073
     Route Refresh:          0          0
-    Total:             310126     468476
+    Total:             343261     513021
   Do log neighbor state changes (via global configuration)
   Default minimum time between advertisement runs is 0 seconds
           
@@ -40,7 +40,7 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
   Additional Paths receive capability: advertised and received
   BGP diverse-paths computation is enabled 
   Session: 10.240.96.1
-  BGP table version 235214, neighbor version 235214/0
+  BGP table version 244389, neighbor version 244389/0
   Output queue size : 0
   Index 3, Advertise bit 0
   3 update-group member
@@ -53,28 +53,28 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
   Slow-peer split-update-group dynamic is disabled
                                  Sent       Rcvd
   Prefix activity:               ----       ----
-    Prefixes Current:               1        566 (Consumes 49808 bytes)
-    Prefixes Total:                10      32082
-    Implicit Withdraw:              9       8542
-    Explicit Withdraw:              0      22974
-    Used as bestpath:             n/a        550
+    Prefixes Current:               1        569 (Consumes 50072 bytes)
+    Prefixes Total:                10      34766
+    Implicit Withdraw:              9       9340
+    Explicit Withdraw:              0      24857
+    Used as bestpath:             n/a        553
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
 
                                    Outbound    Inbound
   Local Policy Denied Prefixes:    --------    -------
     ORIGINATOR loop:                    n/a          1
-    Bestpath from this peer:          93056        n/a
-    Bestpath from iBGP peer:          36323        n/a
-    Total:                           129379          1
+    Bestpath from this peer:          98033        n/a
+    Bestpath from iBGP peer:          38657        n/a
+    Total:                           136690          1
   Number of NLRIs in the update sent: max 1, min 0
-  Current session network count peaked at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (7w3d ago)
-  Highest network count observed at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (7w3d ago)
+  Current session network count peaked at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (10w3d ago)
+  Highest network count observed at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (10w3d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 1
-  Last Sent Refresh Start-of-rib: 27w6d
-  Last Sent Refresh End-of-rib: 27w6d
+  Last Sent Refresh Start-of-rib: 30w6d
+  Last Sent Refresh End-of-rib: 30w6d
   Refresh-Out took 0 seconds
   Last Received Refresh Start-of-rib: never
   Last Received Refresh End-of-rib: never
@@ -86,7 +86,7 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
  For address family: VPNv4 Unicast
   BGP diverse-paths computation is enabled 
   Session: 10.240.96.1
-  BGP table version 10954494, neighbor version 10954494/0
+  BGP table version 11262995, neighbor version 11262995/0
   Output queue size : 0
   Index 3, Advertise bit 0
   3 update-group member
@@ -97,11 +97,11 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
   Slow-peer split-update-group dynamic is disabled
                                  Sent       Rcvd
   Prefix activity:               ----       ----
-    Prefixes Current:              10       8283 (Consumes 1563172 bytes)
-    Prefixes Total:                34    1487691
-    Implicit Withdraw:              1     892508
-    Explicit Withdraw:             23     586900
-    Used as bestpath:             n/a      14653
+    Prefixes Current:              10       8287 (Consumes 1566576 bytes)
+    Prefixes Total:                34    1545062
+    Implicit Withdraw:              1     914632
+    Explicit Withdraw:             23     622143
+    Used as bestpath:             n/a      14666
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
 
@@ -113,25 +113,25 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
     AF Permit Check:                 746683        n/a
     Total:                          1551453          9
   Number of NLRIs in the update sent: max 5, min 0
-  Current session network count peaked at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (1w1d ago)
-  Highest network count observed at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (1w1d ago)
+  Current session network count peaked at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (4w1d ago)
+  Highest network count observed at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (4w1d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 2
-  Last Sent Refresh Start-of-rib: 27w6d
-  Last Sent Refresh End-of-rib: 27w6d
+  Last Sent Refresh Start-of-rib: 30w6d
+  Last Sent Refresh End-of-rib: 30w6d
   Refresh-Out took 0 seconds
-  Last Received Refresh Start-of-rib: 37w6d
-  Last Received Refresh End-of-rib: 37w6d
+  Last Received Refresh Start-of-rib: 40w6d
+  Last Received Refresh End-of-rib: 40w6d
   Refresh-In took 0 seconds
-                		       Sent	  Rcvd
-        Refresh activity:	       ----	  ----
-          Refresh Start-of-RIB          7          1
-          Refresh End-of-RIB            7          1
-          
+				       Sent	  Rcvd
+	Refresh activity:	       ----	  ----
+	  Refresh Start-of-RIB          7          1
+	  Refresh End-of-RIB            7          1
+
  For address family: RT Filter
   Session: 10.240.96.1
-  BGP table version 4542, neighbor version 4542/0
+  BGP table version 4544, neighbor version 4544/0
   Output queue size : 0
   Index 3, Advertise bit 0
   3 update-group member
@@ -141,28 +141,28 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
                                  Sent       Rcvd
   Prefix activity:               ----       ----
     Prefixes Current:              49        106 (Consumes 9328 bytes)
-    Prefixes Total:               481        337
+    Prefixes Total:               481        338
     Implicit Withdraw:            432          8
-    Explicit Withdraw:              0        223
+    Explicit Withdraw:              0        224
     Used as bestpath:             n/a         57
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
 
                                    Outbound    Inbound
   Local Policy Denied Prefixes:    --------    -------
-    Bestpath from iBGP peer:           2119        n/a
-    Total:                             2119          0
+    Bestpath from iBGP peer:           2120        n/a
+    Total:                             2120          0
   Number of NLRIs in the update sent: max 48, min 0
-  Current session network count peaked at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
-  Highest network count observed at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
+  Current session network count peaked at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (3w6d ago)
+  Highest network count observed at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (3w6d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 2
-  Last Sent Refresh Start-of-rib: 27w6d
-  Last Sent Refresh End-of-rib: 27w6d
+  Last Sent Refresh Start-of-rib: 30w6d
+  Last Sent Refresh End-of-rib: 30w6d
   Refresh-Out took 0 seconds
-  Last Received Refresh Start-of-rib: 37w6d
-  Last Received Refresh End-of-rib: 37w6d
+  Last Received Refresh Start-of-rib: 40w6d
+  Last Received Refresh End-of-rib: 40w6d
   Refresh-In took 0 seconds
 				       Sent	  Rcvd
 	Refresh activity:	       ----	  ----
@@ -171,9 +171,9 @@ BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
 
   Address tracking is enabled, the RIB does have a route to 10.240.96.1
   Route to peer address reachability Up: 37; Down: 8
-    Last notification 4w2d
+    Last notification 7w2d
   Connections established 9; dropped 8
-  Last reset 27w6d, due to Active open failed
+  Last reset 30w6d, due to Active open failed
   Interface associated: (none) (peering address NOT in same link)
   Transport(tcp) path-mtu-discovery is enabled
   Graceful-Restart is enabled, restart-time 120 seconds, stalepath-time 360 seconds
@@ -187,11 +187,11 @@ Maximum output segment queue size: 50
 
 Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
 
-Event Timers (current time is 0x9DEDB3038):
+Event Timers (current time is 0xA4A78F654):
 Timer          Starts    Wakeups            Next
-Retrans        310099          0             0x0
+Retrans        343234          0             0x0
 TimeWait            0          0             0x0
-AckHold        395848     369712             0x0
+AckHold        435565     406506             0x0
 SendWnd             0          0             0x0
 KeepAlive          16          0             0x0
 GiveUp              0          0             0x0
@@ -200,22 +200,22 @@ DeadWait            0          0             0x0
 Linger              0          0             0x0
 ProcessQ            0          0             0x0
 
-iss:  189004350  snduna:  194900173  sndnxt:  194900173
-irs: 3334520902  rcvnxt: 3395071802
+iss:  189004350  snduna:  195529738  sndnxt:  195529738
+irs: 3334520902  rcvnxt: 3398710154
 
-sndwnd:  13857  scale:      0  maxrcvwnd:  16384
-rcvwnd:  14255  scale:      0  delrcvwnd:   2129
+sndwnd:  16308  scale:      0  maxrcvwnd:  16384
+rcvwnd:  11795  scale:      0  delrcvwnd:   4589
 
 SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
 minRTT: 0 ms, maxRTT: 1000 ms, ACK hold: 200 ms
-uptime: -1 ms, Sent idletime: 9160 ms, Receive idletime: 9360 ms 
+uptime: -1 ms, Sent idletime: 6636 ms, Receive idletime: 6836 ms 
 Status Flags: passive open, gen tcbs
 Option Flags: nagle, path mtu capable, md5, Retrans timeout
 IP Precedence value : 6
 
 Datagrams (max data segment is 9094 bytes):
-Rcvd: 724094 (out of order: 16), with data: 415457, total data bytes: 60550899
-Sent: 706278 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 310110, total data bytes: 5895822
+Rcvd: 799284 (out of order: 16), with data: 457640, total data bytes: 64189251
+Sent: 779103 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 343245, total data bytes: 6525387
 
  Packets received in fast path: 0, fast processed: 0, slow path: 0
  fast lock acquisition failures: 0, slow path: 0
@@ -224,8 +224,8 @@ TCP Semaphore      0x7B02597C  FREE
 BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
  Inherits from template PS-AGG for session parameters
   BGP version 4, remote router ID 10.240.96.2
-  BGP state = Established, up for 14w6d
-  Last read 00:00:22, last write 00:00:40, hold time is 180, keepalive interval is 60 seconds
+  BGP state = Established, up for 17w6d
+  Last read 00:00:19, last write 00:00:44, hold time is 180, keepalive interval is 60 seconds
   Neighbor sessions:
     1 active, is not multisession capable (disabled)
   Neighbor capabilities:
@@ -251,10 +251,10 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
                          Sent       Rcvd
     Opens:                  1          1
     Notifications:          0          0
-    Updates:               25     124146
-    Keepalives:        165922     153586
+    Updates:               25     137777
+    Keepalives:        199053     184730
     Route Refresh:          0          0
-    Total:             165956     277733
+    Total:             199087     322508
   Do log neighbor state changes (via global configuration)
   Default minimum time between advertisement runs is 0 seconds
 
@@ -262,7 +262,7 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
   Additional Paths receive capability: advertised and received
   BGP diverse-paths computation is enabled 
   Session: 10.240.96.2
-  BGP table version 235214, neighbor version 235214/0
+  BGP table version 244389, neighbor version 244389/0
   Output queue size : 0
   Index 3, Advertise bit 0
   3 update-group member
@@ -275,10 +275,10 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
   Slow-peer split-update-group dynamic is disabled
                                  Sent       Rcvd
   Prefix activity:               ----       ----
-    Prefixes Current:               1        568 (Consumes 49984 bytes)
-    Prefixes Total:                10      29487
-    Implicit Withdraw:              9       7580
-    Explicit Withdraw:              0      21339
+    Prefixes Current:               1        571 (Consumes 50248 bytes)
+    Prefixes Total:                10      32147
+    Implicit Withdraw:              9       8280
+    Explicit Withdraw:              0      23296
     Used as bestpath:             n/a         19
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
@@ -286,17 +286,17 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
                                    Outbound    Inbound
   Local Policy Denied Prefixes:    --------    -------
     ORIGINATOR loop:                    n/a          1
-    Bestpath from this peer:          93056        n/a
-    Bestpath from iBGP peer:          36323        n/a
-    Total:                           129379          1
+    Bestpath from this peer:          98033        n/a
+    Bestpath from iBGP peer:          38657        n/a
+    Total:                           136690          1
   Number of NLRIs in the update sent: max 1, min 0
-  Current session network count peaked at 587 entries at 11:32:36 Sep 6 2021 CENTRAL (7w3d ago)
-  Highest network count observed at 587 entries at 11:32:36 Sep 6 2021 CENTRAL (7w3d ago)
+  Current session network count peaked at 587 entries at 11:32:36 Sep 6 2021 CENTRAL (10w3d ago)
+  Highest network count observed at 587 entries at 11:32:36 Sep 6 2021 CENTRAL (10w3d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 1
-  Last Sent Refresh Start-of-rib: 14w6d
-  Last Sent Refresh End-of-rib: 14w6d
+  Last Sent Refresh Start-of-rib: 17w6d
+  Last Sent Refresh End-of-rib: 17w6d
   Refresh-Out took 0 seconds
   Last Received Refresh Start-of-rib: never
   Last Received Refresh End-of-rib: never
@@ -308,7 +308,7 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
  For address family: VPNv4 Unicast
   BGP diverse-paths computation is enabled 
   Session: 10.240.96.2
-  BGP table version 10954494, neighbor version 10954494/0
+  BGP table version 11262995, neighbor version 11262995/0
   Output queue size : 0
   Index 3, Advertise bit 1
   3 update-group member
@@ -319,32 +319,32 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
   Slow-peer split-update-group dynamic is disabled
                                  Sent       Rcvd
   Prefix activity:               ----       ----
-    Prefixes Current:              10       8283 (Consumes 762772 bytes)
-    Prefixes Total:                29    1088048
-    Implicit Withdraw:             10     704404
-    Explicit Withdraw:              9     375361
-    Used as bestpath:             n/a         60
+    Prefixes Current:              10       8287 (Consumes 763140 bytes)
+    Prefixes Total:                29    1143744
+    Implicit Withdraw:             10     726009
+    Explicit Withdraw:              9     409448
+    Used as bestpath:             n/a         63
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
 
                                    Outbound    Inbound
   Local Policy Denied Prefixes:    --------    -------
     ORIGINATOR loop:                    n/a          6
-    Bestpath from this peer:         630595        n/a
-    Bestpath from iBGP peer:        1326914        n/a
-    AF Permit Check:                1392851        n/a
-    Total:                          3350360          6
+    Bestpath from this peer:         673604        n/a
+    Bestpath from iBGP peer:        1388150        n/a
+    AF Permit Check:                1508857        n/a
+    Total:                          3570611          6
   Number of NLRIs in the update sent: max 5, min 0
-  Current session network count peaked at 33142 entries at 01:14:51 Oct 20 2021 CENTRAL (1w1d ago)
-  Highest network count observed at 33142 entries at 01:14:51 Oct 20 2021 CENTRAL (1w1d ago)
+  Current session network count peaked at 33142 entries at 01:14:51 Oct 20 2021 CENTRAL (4w1d ago)
+  Highest network count observed at 33142 entries at 01:14:51 Oct 20 2021 CENTRAL (4w1d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 2
-  Last Sent Refresh Start-of-rib: 14w6d
-  Last Sent Refresh End-of-rib: 14w6d
+  Last Sent Refresh Start-of-rib: 17w6d
+  Last Sent Refresh End-of-rib: 17w6d
   Refresh-Out took 0 seconds
-  Last Received Refresh Start-of-rib: 34w1d
-  Last Received Refresh End-of-rib: 34w1d
+  Last Received Refresh Start-of-rib: 37w1d
+  Last Received Refresh End-of-rib: 37w1d
   Refresh-In took 0 seconds
 				       Sent	  Rcvd
 	Refresh activity:	       ----	  ----
@@ -353,7 +353,7 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
 
  For address family: RT Filter
   Session: 10.240.96.2
-  BGP table version 4542, neighbor version 4542/0
+  BGP table version 4544, neighbor version 4544/0
   Output queue size : 0
   Index 3, Advertise bit 0
   3 update-group member
@@ -363,28 +363,28 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
                                  Sent       Rcvd
   Prefix activity:               ----       ----
     Prefixes Current:              49        121 (Consumes 10648 bytes)
-    Prefixes Total:               481        446
+    Prefixes Total:               481        447
     Implicit Withdraw:            432        180
-    Explicit Withdraw:              0        145
+    Explicit Withdraw:              0        146
     Used as bestpath:             n/a         16
     Used as multipath:            n/a          0
     Used as secondary:            n/a          0
 
                                    Outbound    Inbound
   Local Policy Denied Prefixes:    --------    -------
-    Bestpath from iBGP peer:           2119        n/a
-    Total:                             2119          0
+    Bestpath from iBGP peer:           2120        n/a
+    Total:                             2120          0
   Number of NLRIs in the update sent: max 48, min 0
-  Current session network count peaked at 121 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
-  Highest network count observed at 121 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
+  Current session network count peaked at 121 entries at 10:57:56 Oct 22 2021 CENTRAL (3w6d ago)
+  Highest network count observed at 121 entries at 10:57:56 Oct 22 2021 CENTRAL (3w6d ago)
   Last detected as dynamic slow peer: never
   Dynamic slow peer recovered: never
   Refresh Epoch: 2
-  Last Sent Refresh Start-of-rib: 14w6d
-  Last Sent Refresh End-of-rib: 14w6d
+  Last Sent Refresh Start-of-rib: 17w6d
+  Last Sent Refresh End-of-rib: 17w6d
   Refresh-Out took 0 seconds
-  Last Received Refresh Start-of-rib: 34w1d
-  Last Received Refresh End-of-rib: 34w1d
+  Last Received Refresh Start-of-rib: 37w1d
+  Last Received Refresh End-of-rib: 37w1d
   Refresh-In took 0 seconds
 				       Sent	  Rcvd
 	Refresh activity:	       ----	  ----
@@ -393,9 +393,9 @@ BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
 
   Address tracking is enabled, the RIB does have a route to 10.240.96.2
   Route to peer address reachability Up: 77; Down: 12
-    Last notification 13w0d
+    Last notification 16w0d
   Connections established 12; dropped 11
-  Last reset 14w6d, due to NSF peer closed the session of session 1
+  Last reset 17w6d, due to NSF peer closed the session of session 1
   Interface associated: (none) (peering address NOT in same link)
   Transport(tcp) path-mtu-discovery is enabled
   Graceful-Restart is enabled, restart-time 120 seconds, stalepath-time 360 seconds
@@ -409,11 +409,11 @@ Maximum output segment queue size: 50
 
 Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
 
-Event Timers (current time is 0x9DEDB5388):
+Event Timers (current time is 0xA4A790E54):
 Timer          Starts    Wakeups            Next
-Retrans        165940          6             0x0
+Retrans        199071          6             0x0
 TimeWait            0          0             0x0
-AckHold        226184     207537             0x0
+AckHold        265898     244305             0x0
 SendWnd             0          0             0x0
 KeepAlive           6          0             0x0
 GiveUp              0          0             0x0
@@ -422,22 +422,22 @@ DeadWait            0          0             0x0
 Linger              0          0             0x0
 ProcessQ            0          0             0x0
 
-iss: 2116793458  snduna: 2119949161  sndnxt: 2119949161
-irs: 3729362629  rcvnxt: 3770791266
+iss: 2116793458  snduna: 2120578650  sndnxt: 2120578650
+irs: 3729362629  rcvnxt: 3774621528
 
-sndwnd:  12527  scale:      0  maxrcvwnd:  16384
-rcvwnd:  11782  scale:      0  delrcvwnd:   4602
+sndwnd:  15054  scale:      0  maxrcvwnd:  16384
+rcvwnd:  15374  scale:      0  delrcvwnd:   1010
 
 SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
 minRTT: 0 ms, maxRTT: 1000 ms, ACK hold: 200 ms
-uptime: -1 ms, Sent idletime: 29792 ms, Receive idletime: 29992 ms 
+uptime: -1 ms, Sent idletime: 23628 ms, Receive idletime: 23828 ms 
 Status Flags: passive open, gen tcbs
 Option Flags: nagle, path mtu capable, md5, Retrans timeout
 IP Precedence value : 6
 
 Datagrams (max data segment is 9094 bytes):
-Rcvd: 405889 (out of order: 6), with data: 240744, total data bytes: 41428636
-Sent: 392731 (retransmit: 6, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 165940, total data bytes: 3155702
+Rcvd: 481073 (out of order: 6), with data: 282940, total data bytes: 45258898
+Sent: 465574 (retransmit: 6, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 199071, total data bytes: 3785191
 
  Packets received in fast path: 0, fast processed: 0, slow path: 0
  fast lock acquisition failures: 0, slow path: 0

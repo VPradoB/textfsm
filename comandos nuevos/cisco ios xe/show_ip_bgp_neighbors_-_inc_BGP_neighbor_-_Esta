@@ -1,0 +1,6 @@
+MXNLEGDP0610RTBHCSRMOB01#show ip bgp neighbors | inc BGP neighbor | Esta
+BGP neighbor is 10.240.96.1,  remote AS 65000, internal link
+  BGP state = Established, up for 30w6d
+BGP neighbor is 10.240.96.2,  remote AS 65000, internal link
+  BGP state = Established, up for 17w6d
+

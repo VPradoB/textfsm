@@ -1,0 +1,133 @@
+Value BGP_neighbor (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value Remote_AS (\d+)
+Value BGP_version (\d+)
+Value Remote_router_id (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value BGP_state (.+)
+Value Last_read (.+)
+Value Last_write (.+)
+Value Hold_time (\d+)
+Value Keepalive_interval (\d+)
+Value Neighbor_sessions_active (\d+)
+Value Capabilities_Route_refresh (.+)
+Value Capabilities_Four_octets_ASN (.+)
+Value List Capabilities_Addr_fam_name (.+)
+Value List Capabilities_Addr_fam_data (.+)
+Value Capabilities_ipv4_MPLS_Label (.+)
+Value Capabilities_Graceful_Restart (.+)
+Value Remote_Restart_timer (\d+)
+Value Capabilities_Enhanced_Refresh (.+)
+Value Capabilities_Multisession (.+)
+Value Capabilities_Stateful_switchover_support_enabled (.+)
+Value Statistics_InQ_depth (\d+)
+Value Statistics_OutQ_depth (\d+)
+Value Statistics_Opens_Sent (\d+)
+Value Statistics_Opens_Rcvd (\d+)
+Value Statistics_Notifications_Sent (\d+)
+Value Statistics_Notifications_Rcvd (\d+)
+Value Statistics_Updates_Sent (\d+)
+Value Statistics_Updates_Rcvd (\d+)
+Value Statistics_Keepalives_Sent (\d+)
+Value Statistics_Keepalives_Rcvd (\d+)
+Value Statistics_Route_Refresh_Sent (\d+)
+Value Statistics_Route_Refresh_Rcvd (\d+)
+Value Statistics_Total_Sent (\d+)
+Value Statistics_Total_Rcvd (\d+)
+Value Default_min_time_between_advertisement (\d+)
+Value BGP_table_version (\d+)
+Value List Addr_family_name (.+)
+Value List BGP_neighbor_version (\d+)
+Value List Update_group ([0-9.]*)
+Value List Filter_group ([0-9.]*)
+Value Local_host (\d+(\.\d+){3})
+Value Local_port (\d+)
+Value Foreign_host (\d+(\.\d+){3})
+Value Foreign_port (\d+)
+Value Connection_tableid_VRF (\d+)
+Value Max_output_segment_queue_size (\d+)
+Value ISS (\d+)
+Value SNDUNA (\d+)
+Value SNDNXT (\d+)
+Value IRS (\d+)
+Value RCVNXT (\d+)
+Value SNSWND (\d+)
+Value MAXRCVWND (\d+)
+Value RCVWND (\d+)
+Value DELRCVWND (\d+)
+Value SRTT (\d+)
+Value RTTO (\d+)
+Value RTV (\d+)
+Value KRTT (\d+)
+Value MinRTT (\d+)
+Value maxRTT (\d+)
+Value AckHold (\d+)
+Value uptime (\S+)
+Value Send_Idletime (\d+)
+Value Receive_idletime (\d+)
+Value Status_Flags (.+)
+Value Option_Flags (.+)
+Value IP_precedence_value (\d+)
+Value Datagrams_max_data_segment (\d+)
+Value Datagrams_Rcvd (\d+)
+Value Datagrams_Rcvd_with_data (\d+)
+Value Datagrams_Rcvd_total_data_byte (\d+)
+Value Datagrams_Sent (\d+)
+Value Datagrams_Sent_with_data (\d+)
+Value Datagrams_Sent_total_data_byte (\d+)
+Value Pack_rcvd_in_fast_path (\d+)
+Value Fast_lock_acquis_failures (\d+)
+Value List CapKey (\S+[\S ]+)
+Value List CapValue (\S+[\S ]+)
+
+
+Start
+ ^BGP neighbor is ${BGP_neighbor},\s+remote AS ${Remote_AS},
+ ^.*BGP version ${BGP_version}, remote router ID ${Remote_router_id}
+ ^  BGP state = ${BGP_state}
+ ^.*Last read ${Last_read}, last write ${Last_write}, hold time is ${Hold_time}, keepalive interval is ${Keepalive_interval}\s+\w
+ ^.*${Neighbor_sessions_active} active
+ ^  Neighbor capabilities: -> Capabilities
+ ^Local host: ${Local_host}, Local port: ${Local_port}
+ ^Foreign host: ${Foreign_host}, Foreign port: ${Foreign_port} 
+ ^Connection tableid \(VRF\): ${Connection_tableid_VRF}
+ ^Maximum output segment queue size: ${Max_output_segment_queue_size}
+ ^iss:\s+${ISS}\s+snduna:\s+${SNDUNA}\s+sndnxt:\s+${SNDNXT}
+ ^irs:\s+${IRS}\s+rcvnxt:\s+${RCVNXT}
+ ^sndwnd:\s+${SNSWND}\s+scale:\s+\d+\s+maxrcvwnd:\s+${MAXRCVWND}
+ ^rcvwnd:\s+${RCVWND}\s+scale:\s+\d+\s+delrcvwnd:\s+${DELRCVWND}
+ ^SRTT:\s+${SRTT}\s+ms,\s+RTTO:\s+${RTTO}\s+ms,\s+RTV:\s+${RTV}\s+ms,\s+KRTT:\s+${KRTT}\s+ms
+ ^minRTT:\s+${MinRTT}\s+ms,\s+maxRTT:\s+${maxRTT}\s+ms,\s+ACK hold:\s+${AckHold}\s+ms
+ ^uptime:\s+${uptime}\s+ms,\s+Sent idletime:\s+${Send_Idletime}\s+ms,\s+Receive idletime:\s+${Receive_idletime}\s+ms 
+ ^Status Flags:\s+${Status_Flags}
+ ^Option Flags: ${Option_Flags}
+ ^IP Precedence value : ${IP_precedence_value}
+ ^Datagrams \(max data segment is ${Datagrams_max_data_segment} bytes\): 
+ ^Rcvd: ${Datagrams_Rcvd} \(out of order: \d+\), with data: ${Datagrams_Rcvd_with_data}, total data bytes: ${Datagrams_Rcvd_total_data_byte}
+ ^Sent: ${Datagrams_Sent}\s+\(retransmit:\s+\d+, fastretransmit: \d+, partialack: \d+, Second Congestion: \d+\), with data: ${Datagrams_Sent_with_data}, total data bytes: ${Datagrams_Sent_total_data_byte}
+ ^.*Packets received in fast path: ${Pack_rcvd_in_fast_path},
+ ^.*fast lock acquisition failures: ${Fast_lock_acquis_failures} -> Record
+
+
+Capabilities
+ ^\s+For Address Family: ${Addr_family_name} -> AddressFamily
+ ^    ${CapKey}: ${CapValue} -> Continue
+ ^      ${CapKey}: ${CapValue} -> Continue
+ ^  Message statistics: -> Statistics
+
+
+
+CapaAddrFam
+ ^    Address family ${Capabilities_Addr_fam_name}: ${Capabilities_Addr_fam_data} -> Start
+
+AddressFamily
+ ^.*BGP table version ${BGP_table_version}, neighbor version ${BGP_neighbor_version} -> Start
+
+Statistics
+ ^    InQ depth is ${Statistics_InQ_depth}
+ ^    OutQ depth is ${Statistics_OutQ_depth}
+ ^    Opens:\s+${Statistics_Opens_Sent}\s+${Statistics_Opens_Rcvd}
+ ^    Notifications:\s+${Statistics_Notifications_Sent}\s+${Statistics_Notifications_Rcvd}
+ ^    Updates:\s+${Statistics_Updates_Sent}\s+${Statistics_Updates_Rcvd}
+ ^    Keepalives:\s+${Statistics_Keepalives_Sent}\s+${Statistics_Keepalives_Rcvd}
+ ^    Route\s+Refresh:\s+${Statistics_Route_Refresh_Sent}\s+${Statistics_Route_Refresh_Rcvd}
+# ^    Total:\s+${Statistics_Total_Sent}\s+${Statistics_Total_Rcvd}
+ ^.*Default minimum time between advertisement runs is ${Default_min_time_between_advertisement} seconds -> Start

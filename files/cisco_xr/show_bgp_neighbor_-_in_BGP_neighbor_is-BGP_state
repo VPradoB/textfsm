@@ -1,0 +1,13 @@
+RP/0/RP0/CPU0:MXMERM01RTDCEDGE01#show bgp neighbor | in "BGP neighbor is|BGP state"
+Thu Nov 18 13:12:16.269 CST
+BGP neighbor is 10.39.237.128
+  BGP state = Established, up for 22w6d
+BGP neighbor is 10.39.237.129
+  BGP state = Established, up for 22w6d
+BGP neighbor is 10.190.2.100
+  BGP state = Established, up for 14w3d
+BGP neighbor is 10.190.2.200
+  BGP state = Established, up for 22w6d
+BGP neighbor is 10.190.2.201
+  BGP state = Established, up for 3w0d
+
