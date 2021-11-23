@@ -1,0 +1,9 @@
+Value Neighbor (\S+)
+Value Remote (\S+)
+Value Description (\S+[\S ]+)
+Value State (\S+[\S ]+)
+Value Time (\S+)
+
+Start
+  ^BGP neighbor is ${Neighbor},  remote AS ${Remote}, ${Description}
+  ^  BGP state = ${State}, up for ${Time} -> Record

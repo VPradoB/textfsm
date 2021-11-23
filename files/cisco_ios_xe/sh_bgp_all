@@ -1,4 +1,3 @@
-MXSINCUL0494RTBHCSRMOB01#sh bgp all   
 For address family: IPv4 Unicast
 
 BGP table version is 26897, local router ID is 10.240.199.54

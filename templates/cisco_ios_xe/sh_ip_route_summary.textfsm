@@ -1,0 +1,13 @@
+Value Filldown IpRoutingTableName (\S+[\S ]+)
+Value Filldown IpRoutingTableMaxPaths (\d+)
+Value List RouteSource (\S+[\S ]+)
+Value List Networks (\d+)
+Value List Subnets (\d+)
+Value List Replicates (\d+)
+Value List OverHead (\d)
+Value List Memory (\d+)
+
+Start
+  ^IP routing table name is ${IpRoutingTableName}
+  ^IP routing table maximum-paths is ${IpRoutingTableMaxPaths}
+  ^${RouteSource}\s+${Networks}\s+${Subnets}\s+${Replicates}\s+${OverHead}\s+${Memory}

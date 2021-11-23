@@ -11,4 +11,3 @@ Value List TblSince (\S+)
 Start
   ^\s+${ResumeIp} is ${ResumeType}, ${ResumeSubnets} subnets, ${ResumeMasks} masks
   ^${TblCode}\s+${TblIp} ${TblNumber} via ${TblViaIp}, ${TblSince} -> Continue
- 

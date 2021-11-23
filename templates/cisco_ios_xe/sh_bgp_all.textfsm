@@ -1,0 +1,14 @@
+Value Filldown AddressFamily (\S+[\S ]+)
+Value Filldown BGPTableVersion (\d+)
+Value Filldown LocalRouterId (\S+)
+Value List Network (\S+)
+Value List NextHop (\S+)
+Value List Metric (\d+)
+Value List LocPrf (\d+)
+Value List Weight (\d+)
+Value List Path (\S+)
+
+Start
+  ^For address family: ${AddressFamily}
+  ^BGP table version is ${BGPTableVersion}, local router ID is ${LocalRouterId}
+  ^\s+\*>i\s+${Network}\s+${NextHop}\s+${Metric}\s+${LocPrf}\s+${Weight}\s+${Path}

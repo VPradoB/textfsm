@@ -14,6 +14,11 @@ pipenv install
 Just execute the run file.
 ```python run.py```
 
+## Available Command List
+|vendor|command|Done|
+|======|=======|:==:|
+|cisco_ios|show ip bgp neighbor|Yes|
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
