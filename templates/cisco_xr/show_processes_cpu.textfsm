@@ -1,0 +1,14 @@
+Value CPUName (\S+)
+Value CPUUsageMin (\d+)
+Value CPUUsage5Min (\d+)
+Value CPUUsage15Min (\d+)
+Value List PID (\d+)
+Value List UsageMin (\d+)
+Value List Usage5Min (\d+)
+Value List Usage15Min (\d+)
+Value List Process (bgp[\S+]+|bgp)
+
+Start
+  ^---- ${CPUName} ----
+  ^CPU utilization for one minute: ${CPUUsageMin}%; five minutes: ${CPUUsage5Min}%; fifteen minutes: ${CPUUsage15Min}%
+  ^${PID}\s+${UsageMin}%\s+${Usage5Min}%\s+${Usage15Min}%\s+${Process}

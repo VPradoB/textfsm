@@ -1,5 +1,3 @@
-RP/0/RP0/CPU0:MXMERM01RTDCEDGE01#show processes cpu
-Thu Nov 18 13:17:28.623 CST
 ---- node0_RP0_CPU0 ----
 
 CPU utilization for one minute: 1%; five minutes: 2%; fifteen minutes: 1%

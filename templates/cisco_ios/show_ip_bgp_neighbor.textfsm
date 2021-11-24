@@ -1,224 +1,133 @@
-Value NeighborIP (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
-Value NeighborRemoteAs (\d+)
-Value NeighborBGPVersion (\d+)
-Value NeighborRemoteRouterId (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
-Value BGPState (\S+)
-Value BGPStateUpFor (\S+)
-Value LastRead (\d+\:\d+\:\d+)
-Value LastWrite (\d+\:\d+\:\d+)
-Value HoldTime (\d+)
-Value KeepAliveInterval (\d+)
-Value ActiveNeighborSessions (\d+)
-Value ActiveNeighborSessions (\d+)
+Value BGP_neighbor (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value Remote_AS (\d+)
+Value BGP_version (\d+)
+Value Remote_router_id (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value BGP_state (.+)
+Value Last_read (.+)
+Value Last_write (.+)
+Value Hold_time (\d+)
+Value Keepalive_interval (\d+)
+Value Neighbor_sessions_active (\d+)
+Value Capabilities_Route_refresh (.+)
+Value Capabilities_Four_octets_ASN (.+)
+Value List Capabilities_Addr_fam_name (.+)
+Value List Capabilities_Addr_fam_data (.+)
+Value Capabilities_ipv4_MPLS_Label (.+)
+Value Capabilities_Graceful_Restart (.+)
+Value Remote_Restart_timer (\d+)
+Value Capabilities_Enhanced_Refresh (.+)
+Value Capabilities_Multisession (.+)
+Value Capabilities_Stateful_switchover_support_enabled (.+)
+Value Statistics_InQ_depth (\d+)
+Value Statistics_OutQ_depth (\d+)
+Value Statistics_Opens_Sent (\d+)
+Value Statistics_Opens_Rcvd (\d+)
+Value Statistics_Notifications_Sent (\d+)
+Value Statistics_Notifications_Rcvd (\d+)
+Value Statistics_Updates_Sent (\d+)
+Value Statistics_Updates_Rcvd (\d+)
+Value Statistics_Keepalives_Sent (\d+)
+Value Statistics_Keepalives_Rcvd (\d+)
+Value Statistics_Route_Refresh_Sent (\d+)
+Value Statistics_Route_Refresh_Rcvd (\d+)
+Value Statistics_Total_Sent (\d+)
+Value Statistics_Total_Rcvd (\d+)
+Value Default_min_time_between_advertisement (\d+)
+Value BGP_table_version (\d+)
+Value List Addr_family_name (.+)
+Value List BGP_neighbor_version (\d+)
+Value List Update_group ([0-9.]*)
+Value List Filter_group ([0-9.]*)
+Value Local_host (\d+(\.\d+){3})
+Value Local_port (\d+)
+Value Foreign_host (\d+(\.\d+){3})
+Value Foreign_port (\d+)
+Value Connection_tableid_VRF (\d+)
+Value Max_output_segment_queue_size (\d+)
+Value ISS (\d+)
+Value SNDUNA (\d+)
+Value SNDNXT (\d+)
+Value IRS (\d+)
+Value RCVNXT (\d+)
+Value SNSWND (\d+)
+Value MAXRCVWND (\d+)
+Value RCVWND (\d+)
+Value DELRCVWND (\d+)
+Value SRTT (\d+)
+Value RTTO (\d+)
+Value RTV (\d+)
+Value KRTT (\d+)
+Value MinRTT (\d+)
+Value maxRTT (\d+)
+Value AckHold (\d+)
+Value uptime (\S+)
+Value Send_Idletime (\d+)
+Value Receive_idletime (\d+)
+Value Status_Flags (.+)
+Value Option_Flags (.+)
+Value IP_precedence_value (\d+)
+Value Datagrams_max_data_segment (\d+)
+Value Datagrams_Rcvd (\d+)
+Value Datagrams_Rcvd_with_data (\d+)
+Value Datagrams_Rcvd_total_data_byte (\d+)
+Value Datagrams_Sent (\d+)
+Value Datagrams_Sent_with_data (\d+)
+Value Datagrams_Sent_total_data_byte (\d+)
+Value Pack_rcvd_in_fast_path (\d+)
+Value Fast_lock_acquis_failures (\d+)
+Value List CapKey (\S+[\S ]+)
+Value List CapValue (\S+[\S ]+)
+
 
 Start
-  ^BGP neighbor is ${NeighborIP},  remote AS ${NeighborRemoteAs}, internal link
-  ^Inherits from template PS-AGG for session parameters
-  ^  BGP version ${NeighborBGPVersion}, remote router ID ${NeighborRemoteRouterId}
-  ^  BGP state = Established, up for 27w6d
-  ^  Last read 00:00:47, last write 00:00:32, hold time is 180, keepalive interval is 60 seconds
-  ^  Neighbor sessions:
-  ^    1 active, is not multisession capable (disabled)
-  ^  Neighbor capabilities:
-  ^    Route refresh: advertised and received(new)
-  ^    Four-octets ASN Capability: advertised and received
-  ^    Address family IPv4 Unicast: advertised and received
-  ^    ipv4 MPLS Label capability: advertised and received
-  ^    Address family VPNv4 Unicast: advertised and received
-  ^    Address family RT Filter: advertised and received
-  ^    Graceful Restart Capability: advertised and received
-  ^      Remote Restart timer is 120 seconds
-  ^      Address families advertised by peer:
-  ^        IPv4 Unicast (was not preserved), VPNv4 Unicast (was not preserved), RT Filter (was not preserved)
-  ^      Address families advertised by peer before restart:
-  ^        IPv4 Unicast, VPNv4 Unicast, RT Filter
-  ^    Enhanced Refresh Capability: advertised and received
-  ^    Multisession Capability: 
-  ^    Stateful switchover support enabled: NO for session 1
-  ^  Message statistics:
-  ^    InQ depth is 0
-  ^    OutQ depth is 0
-  ^    
-  ^                        Sent       Rcvd
-  ^    Opens:                  1          1
-  ^    Notifications:          0          0
-  ^    Updates:               39     179514
-  ^    Keepalives:        310078     288961
-  ^    Route Refresh:          0          0
-  ^    Total:             310126     468476
-  ^  Do log neighbor state changes (via global configuration)
-  ^  Default minimum time between advertisement runs is 0 seconds
-  ^          
-  ^For address family: IPv4 Unicast
-  ^  Additional Paths receive capability: advertised and received
-  ^  BGP diverse-paths computation is enabled 
-  ^  Session: 10.240.96.1
-  ^  BGP table version 235214, neighbor version 235214/0
-  ^  Output queue size : 0
-  ^  Index 3, Advertise bit 0
-  ^  3 update-group member
-  ^  Inherits from template PP-IPv4-POLICY
-  ^  Community attribute sent to this neighbor
-  ^  Inbound path policy configured
-  ^  Route map for incoming advertisements is RM-From_AGG_In
-  ^  Sending Prefix & Label
-  ^  Slow-peer detection is disabled
-  ^  Slow-peer split-update-group dynamic is disabled
-  ^                                Sent       Rcvd
-  ^  Prefix activity:               ----       ----
-  ^    Prefixes Current:               1        566 (Consumes 49808 bytes)
-  ^    Prefixes Total:                10      32082
-  ^    Implicit Withdraw:              9       8542
-  ^    Explicit Withdraw:              0      22974
-  ^    Used as bestpath:             n/a        550
-  ^    Used as multipath:            n/a          0
-  ^    Used as secondary:            n/a          0^
-  ^                                  Outbound    Inbound
-  ^  Local Policy Denied Prefixes:    --------    -------
-  ^    ORIGINATOR loop:                    n/a          1
-  ^    Bestpath from this peer:          93056        n/a
-  ^    Bestpath from iBGP peer:          36323        n/a
-  ^    Total:                           129379          1
-  ^  Number of NLRIs in the update sent: max 1, min 0
-  ^  Current session network count peaked at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (7w3d ago)
-  ^  Highest network count observed at 585 entries at 11:32:38 Sep 6 2021 CENTRAL (7w3d ago)
-  ^  Last detected as dynamic slow peer: never
-  ^  Dynamic slow peer recovered: never
-  ^  Refresh Epoch: 1
-  ^  Last Sent Refresh Start-of-rib: 27w6d
-  ^  Last Sent Refresh End-of-rib: 27w6d
-  ^  Refresh-Out took 0 seconds
-  ^  Last Received Refresh Start-of-rib: never
-  ^  Last Received Refresh End-of-rib: never
-  ^              Sent	  Rcvd
-  ^  Refresh activity:	       ----	  ----
-  ^    Refresh Start-of-RIB          3          0
-  ^    Refresh End-of-RIB            3          0^
-  ^For address family: VPNv4 Unicast
-  ^  BGP diverse-paths computation is enabled 
-  ^  Session: 10.240.96.1
-  ^  BGP table version 10954494, neighbor version 10954494/0
-  ^  Output queue size : 0
-  ^  Index 3, Advertise bit 0
-  ^  3 update-group member
-  ^  Inherits from template PP-VPNv4-POLICY
-  ^  RT Filter activate
-  ^  Extended-community attribute sent to this neighbor
-  ^  Slow-peer detection is disabled
-  ^  Slow-peer split-update-group dynamic is disabled
-  ^                                Sent       Rcvd
-  ^  Prefix activity:               ----       ----
-  ^    Prefixes Current:              10       8283 (Consumes 1563172 bytes)
-  ^    Prefixes Total:                34    1487691
-  ^    Implicit Withdraw:              1     892508
-  ^    Explicit Withdraw:             23     586900
-  ^    Used as bestpath:             n/a      14653
-  ^    Used as multipath:            n/a          0
-  ^    Used as secondary:            n/a          0^
-  ^                                  Outbound    Inbound
-  ^  Local Policy Denied Prefixes:    --------    -------
-  ^    ORIGINATOR loop:                    n/a          9
-  ^    Bestpath from this peer:         485198        n/a
-  ^    Bestpath from iBGP peer:         319572        n/a
-  ^    AF Permit Check:                 746683        n/a
-  ^    Total:                          1551453          9
-  ^  Number of NLRIs in the update sent: max 5, min 0
-  ^  Current session network count peaked at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (1w1d ago)
-  ^  Highest network count observed at 33142 entries at 01:15:39 Oct 20 2021 CENTRAL (1w1d ago)
-  ^  Last detected as dynamic slow peer: never
-  ^  Dynamic slow peer recovered: never
-  ^  Refresh Epoch: 2
-  ^  Last Sent Refresh Start-of-rib: 27w6d
-  ^  Last Sent Refresh End-of-rib: 27w6d
-  ^  Refresh-Out took 0 seconds
-  ^  Last Received Refresh Start-of-rib: 37w6d
-  ^  Last Received Refresh End-of-rib: 37w6d
-  ^  Refresh-In took 0 seconds
-  ^                          Sent	  Rcvd
-  ^        Refresh activity:	       ----	  ----
-  ^          Refresh Start-of-RIB          7          1
-  ^          Refresh End-of-RIB            7          1
-  ^          
-  ^For address family: RT Filter
-  ^  Session: 10.240.96.1
-  ^  BGP table version 4542, neighbor version 4542/0
-  ^  Output queue size : 0
-  ^  Index 3, Advertise bit 0
-  ^  3 update-group member
-  ^  Extended-community attribute sent to this neighbor
-  ^  Slow-peer detection is disabled
-  ^  Slow-peer split-update-group dynamic is disabled
-  ^                                Sent       Rcvd
-  ^  Prefix activity:               ----       ----
-  ^    Prefixes Current:              49        106 (Consumes 9328 bytes)
-  ^    Prefixes Total:               481        337
-  ^    Implicit Withdraw:            432          8
-  ^    Explicit Withdraw:              0        223
-  ^    Used as bestpath:             n/a         57
-  ^    Used as multipath:            n/a          0
-  ^    Used as secondary:            n/a          0^
-  ^                                  Outbound    Inbound
-  ^  Local Policy Denied Prefixes:    --------    -------
-  ^    Bestpath from iBGP peer:           2119        n/a
-  ^    Total:                             2119          0
-  ^  Number of NLRIs in the update sent: max 48, min 0
-  ^  Current session network count peaked at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
-  ^  Highest network count observed at 106 entries at 10:57:56 Oct 22 2021 CENTRAL (6d06h ago)
-  ^  Last detected as dynamic slow peer: never
-  ^  Dynamic slow peer recovered: never
-  ^  Refresh Epoch: 2
-  ^  Last Sent Refresh Start-of-rib: 27w6d
-  ^  Last Sent Refresh End-of-rib: 27w6d
-  ^  Refresh-Out took 0 seconds
-  ^  Last Received Refresh Start-of-rib: 37w6d
-  ^  Last Received Refresh End-of-rib: 37w6d
-  ^  Refresh-In took 0 seconds
-  ^              Sent	  Rcvd
-  ^  Refresh activity:	       ----	  ----
-  ^    Refresh Start-of-RIB          3          1
-  ^    Refresh End-of-RIB            3          1^
-  ^  Address tracking is enabled, the RIB does have a route to 10.240.96.1
-  ^  Route to peer address reachability Up: 37; Down: 8
-  ^    Last notification 4w2d
-  ^  Connections established 9; dropped 8
-  ^  Last reset 27w6d, due to Active open failed
-  ^  Interface associated: (none) (peering address NOT in same link)
-  ^  Transport(tcp) path-mtu-discovery is enabled
-  ^  Graceful-Restart is enabled, restart-time 120 seconds, stalepath-time 360 seconds
-  ^  SSO is disabled
-  ^Connection state is ESTAB, I/O status: 1, unread input bytes: 0            
-  ^Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
-  ^Local host: 10.240.96.14, Local port: 179
-  ^Foreign host: 10.240.96.1, Foreign port: 21873
-  ^Connection tableid (VRF): 0
-  ^Maximum output segment queue size: 50^
-  ^Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)^
-  ^Event Timers (current time is 0x9DEDB3038):
-  ^Timer          Starts    Wakeups            Next
-  ^Retrans        310099          0             0x0
-  ^TimeWait            0          0             0x0
-  ^AckHold        395848     369712             0x0
-  ^SendWnd             0          0             0x0
-  ^KeepAlive          16          0             0x0
-  ^GiveUp              0          0             0x0
-  ^PmtuAger            0          0             0x0
-  ^DeadWait            0          0             0x0
-  ^Linger              0          0             0x0
-  ^ProcessQ            0          0             0x0^
-  ^iss:  189004350  snduna:  194900173  sndnxt:  194900173
-  ^irs: 3334520902  rcvnxt: 3395071802^
-  ^sndwnd:  13857  scale:      0  maxrcvwnd:  16384
-  ^rcvwnd:  14255  scale:      0  delrcvwnd:   2129^
-  ^SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
-  ^minRTT: 0 ms, maxRTT: 1000 ms, ACK hold: 200 ms
-  ^uptime: -1 ms, Sent idletime: 9160 ms, Receive idletime: 9360 ms 
-  ^Status Flags: passive open, gen tcbs
-  ^Option Flags: nagle, path mtu capable, md5, Retrans timeout
-  ^IP Precedence value : 6^
-  ^Datagrams (max data segment is 9094 bytes):
-  ^Rcvd: 724094 (out of order: 16), with data: 415457, total data bytes: 60550899
-  ^Sent: 706278 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 310110, total data bytes: 5895822^
-  ^Packets received in fast path: 0, fast processed: 0, slow path: 0
-  ^fast lock acquisition failures: 0, slow path: 0
-  ^TCP Semaphore      0x7B02597C  FREE  
-  ^ -> Record
+ ^BGP neighbor is ${BGP_neighbor},\s+remote AS ${Remote_AS},
+ ^.*BGP version ${BGP_version}, remote router ID ${Remote_router_id}
+ ^  BGP state = ${BGP_state}
+ ^.*Last read ${Last_read}, last write ${Last_write}, hold time is ${Hold_time}, keepalive interval is ${Keepalive_interval}\s+\w
+ ^.*${Neighbor_sessions_active} active
+ ^  Neighbor capabilities: -> Capabilities
+ ^Local host: ${Local_host}, Local port: ${Local_port}
+ ^Foreign host: ${Foreign_host}, Foreign port: ${Foreign_port} 
+ ^Connection tableid \(VRF\): ${Connection_tableid_VRF}
+ ^Maximum output segment queue size: ${Max_output_segment_queue_size}
+ ^iss:\s+${ISS}\s+snduna:\s+${SNDUNA}\s+sndnxt:\s+${SNDNXT}
+ ^irs:\s+${IRS}\s+rcvnxt:\s+${RCVNXT}
+ ^sndwnd:\s+${SNSWND}\s+scale:\s+\d+\s+maxrcvwnd:\s+${MAXRCVWND}
+ ^rcvwnd:\s+${RCVWND}\s+scale:\s+\d+\s+delrcvwnd:\s+${DELRCVWND}
+ ^SRTT:\s+${SRTT}\s+ms,\s+RTTO:\s+${RTTO}\s+ms,\s+RTV:\s+${RTV}\s+ms,\s+KRTT:\s+${KRTT}\s+ms
+ ^minRTT:\s+${MinRTT}\s+ms,\s+maxRTT:\s+${maxRTT}\s+ms,\s+ACK hold:\s+${AckHold}\s+ms
+ ^uptime:\s+${uptime}\s+ms,\s+Sent idletime:\s+${Send_Idletime}\s+ms,\s+Receive idletime:\s+${Receive_idletime}\s+ms 
+ ^Status Flags:\s+${Status_Flags}
+ ^Option Flags: ${Option_Flags}
+ ^IP Precedence value : ${IP_precedence_value}
+ ^Datagrams \(max data segment is ${Datagrams_max_data_segment} bytes\): 
+ ^Rcvd: ${Datagrams_Rcvd} \(out of order: \d+\), with data: ${Datagrams_Rcvd_with_data}, total data bytes: ${Datagrams_Rcvd_total_data_byte}
+ ^Sent: ${Datagrams_Sent}\s+\(retransmit:\s+\d+, fastretransmit: \d+, partialack: \d+, Second Congestion: \d+\), with data: ${Datagrams_Sent_with_data}, total data bytes: ${Datagrams_Sent_total_data_byte}
+ ^.*Packets received in fast path: ${Pack_rcvd_in_fast_path},
+ ^.*fast lock acquisition failures: ${Fast_lock_acquis_failures} -> Record
+
+
+Capabilities
+ ^\s+For Address Family: ${Addr_family_name} -> AddressFamily
+ ^    ${CapKey}: ${CapValue} -> Continue
+ ^      ${CapKey}: ${CapValue} -> Continue
+ ^  Message statistics: -> Statistics
+
+
+
+CapaAddrFam
+ ^    Address family ${Capabilities_Addr_fam_name}: ${Capabilities_Addr_fam_data} -> Start
+
+AddressFamily
+ ^.*BGP table version ${BGP_table_version}, neighbor version ${BGP_neighbor_version} -> Start
+
+Statistics
+ ^    InQ depth is ${Statistics_InQ_depth}
+ ^    OutQ depth is ${Statistics_OutQ_depth}
+ ^    Opens:\s+${Statistics_Opens_Sent}\s+${Statistics_Opens_Rcvd}
+ ^    Notifications:\s+${Statistics_Notifications_Sent}\s+${Statistics_Notifications_Rcvd}
+ ^    Updates:\s+${Statistics_Updates_Sent}\s+${Statistics_Updates_Rcvd}
+ ^    Keepalives:\s+${Statistics_Keepalives_Sent}\s+${Statistics_Keepalives_Rcvd}
+ ^    Route\s+Refresh:\s+${Statistics_Route_Refresh_Sent}\s+${Statistics_Route_Refresh_Rcvd}
+# ^    Total:\s+${Statistics_Total_Sent}\s+${Statistics_Total_Rcvd}
+ ^.*Default minimum time between advertisement runs is ${Default_min_time_between_advertisement} seconds -> Start
